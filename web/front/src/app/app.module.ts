@@ -18,7 +18,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 
 import { Router } from "./router/router";
 
-import { HttpclientService } from "./servers/httpclient.service.ts";
+import { HttpclientService } from "./servers/httpclient.service";
 
 
 @NgModule({
