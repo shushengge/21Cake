@@ -12,10 +12,6 @@ export class IndexComponent implements OnInit {
   constructor(private http: HttpclientService ) { }
 
   ngOnInit() {
-  //测试
-    this.http.get("http://localhost:8080/frontProducts").then((res)=>{
-        console.log(res);
-    })
   }
 
 }
