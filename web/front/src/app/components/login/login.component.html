@@ -1,2 +1,19 @@
-<header></header>
-<h1>我是登录</h1>
+    <div id="login">
+        <header></header>
+        <div class="login-box">
+            <div class="login-nav">
+                <ul>
+                    <a routerLink="/login/login1"><li class="fl li-left" (click)="tologin1()">帐号密码登录</li></a>
+                    <a routerLink="/login/login2"><li class="fl li-right" (click)="tologin2()">手机验证码登录</li></a>
+                </ul>
+            </div>
+            <router-outlet></router-outlet>
+            <div>
+                <input type="button" value="登录" class="login-btn" (click)="tologin()"/>
+            </div>
+            <div class="login-foot">
+                <input type="checkbox" class="fl"/><a class="fl">记住帐号</a>
+                <a class="fr">去注册</a><a class="fr">忘记密码</a>
+            </div>
+        </div>
+    </div>

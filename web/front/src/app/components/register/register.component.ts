@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import '../../../assets/common/base.css';
 
 @Component({
   selector: 'register',

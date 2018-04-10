@@ -19,6 +19,9 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { Router } from "./router/router";
 
 import { HttpclientService } from "./servers/httpclient.service";
+import { MyComponent } from './components/my/my.component';
+import { Login1Component } from './components/login/login1/login1.component';
+import { Login2Component } from './components/login/login2/login2.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { HttpclientService } from "./servers/httpclient.service";
     RegisterComponent,
     DetailsComponent,
     SpinnerComponent,
-    HeaderComponent
+    HeaderComponent,
+    Login1Component,
+    Login2Component,
+    MyComponent ,
   ],
   imports: [
     BrowserModule,
