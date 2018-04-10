@@ -11,7 +11,7 @@ import { HttpclientService } from "../../servers/httpclient.service"
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private router: Router) { }
+  constructor( private router: Router,private http: HttpclientService) { }
 
   ngOnInit() {
         this.router.navigate(['login/login1']);
@@ -27,5 +27,14 @@ export class LoginComponent implements OnInit {
         $('.li-left').removeClass('high')
   }
   tologin(){
-        $('.hint').attr("value",'用户名或密码错误')
+        this.http.get('login',{username:$('.username').val(),password:$('.password').val()}).then((res) => {
+            if(res.status){
+              this.router.navigate(['index']
+            }else{
+              $('.hint').val('登录信息有误')
+              $('.username').val('')
+              $('.password').val('')
+              $('.username').focus()
+            }
+        }
     }
