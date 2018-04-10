@@ -1,0 +1,11 @@
+#login .head{height:1.28rem;text-align: center;background:#ccc;}
+#login .head h1{line-height:1.28rem;}
+#login .login-box{padding:0 0.746667rem;margin-top:0.4rem;}
+#login .login-box .login-nav{overflow:hidden;margin-bottom:0.666667rem;}
+#login .login-box .login-nav ul{height:1.013333rem;}
+#login .login-box .login-nav ul li{line-height:0.986667rem;border-bottom:0.026667rem solid #969696;width:50%;text-align: center;color:#969696;font-size:0.373333rem;}
+#login .login-box .login-btn{width:100%;height:1.12rem;background:#442818;color:#fff;font-size:0.373333rem;}
+#login .login-box .login-foot{margin-top:0.666667rem;overflow:hidden;}
+#login .login-box .login-foot a{font-size:0.32rem;color:#442818;margin-left:0.213333rem;}
+#login .login-box .login-foot input{height:0.4rem;width:0.4rem;}
+#login .login-box .login-nav ul .high{color:#333;border-bottom:0.026667rem solid #442818;}

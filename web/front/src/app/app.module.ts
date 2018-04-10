@@ -19,9 +19,15 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { Router } from "./router/router";
 
 import { HttpclientService } from "./servers/httpclient.service";
+<<<<<<< HEAD
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './components/search/search.component';
 import { HotshopComponent } from './components/hotshop/hotshop.component';
+=======
+import { MyComponent } from './components/my/my.component';
+import { Login1Component } from './components/login/login1/login1.component';
+import { Login2Component } from './components/login/login2/login2.component';
+>>>>>>> a5dd221b75ae19702765b58d3fa4cff379fe87df
 
 
 @NgModule({
@@ -35,9 +41,15 @@ import { HotshopComponent } from './components/hotshop/hotshop.component';
     DetailsComponent,
     SpinnerComponent,
     HeaderComponent,
+<<<<<<< HEAD
     SearchComponent, 
     HotshopComponent, 
     FooterComponent ,
+=======
+    Login1Component,
+    Login2Component,
+    MyComponent ,
+>>>>>>> a5dd221b75ae19702765b58d3fa4cff379fe87df
   ],
   imports: [
     BrowserModule,

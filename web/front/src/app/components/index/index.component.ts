@@ -11,6 +11,7 @@ export class IndexComponent implements OnInit {
 
     constructor(private http: HttpclientService ) { }
 
+<<<<<<< HEAD
     
     dataset : Array<any>;
 
@@ -52,5 +53,9 @@ export class IndexComponent implements OnInit {
             slideShadows : true
         });  
     }
+=======
+  ngOnInit() {
+  }
+>>>>>>> a5dd221b75ae19702765b58d3fa4cff379fe87df
 
 }
