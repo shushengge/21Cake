@@ -19,6 +19,9 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { Router } from "./router/router";
 
 import { HttpclientService } from "./servers/httpclient.service";
+import { FooterComponent } from './components/footer/footer.component';
+import { SearchComponent } from './components/search/search.component';
+import { HotshopComponent } from './components/hotshop/hotshop.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { HttpclientService } from "./servers/httpclient.service";
     RegisterComponent,
     DetailsComponent,
     SpinnerComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent, 
+    HotshopComponent, 
+    FooterComponent ,
   ],
   imports: [
     BrowserModule,
