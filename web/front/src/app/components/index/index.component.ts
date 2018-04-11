@@ -59,7 +59,6 @@ export class IndexComponent implements OnInit {
       
     jump(id){
         this.router.navigate(['/details/'+id]);
-        });  
     }
 
 }
