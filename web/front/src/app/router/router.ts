@@ -6,26 +6,24 @@ import { IndexComponent } from "../components/index/index.component";
 import { ListComponent } from "../components/list/list.component";
 import { LoginComponent } from "../components/login/login.component";
 import { RegisterComponent } from "../components/register/register.component";
-<<<<<<< HEAD
 import { HotshopComponent } from '../components/hotshop/hotshop.component'
-=======
 import { MyComponent } from "../components/my/my.component";
 import { Login1Component } from "../components/login/login1/login1.component";
 import { Login2Component } from "../components/login/login2/login2.component";
->>>>>>> a5dd221b75ae19702765b58d3fa4cff379fe87df
+import { SearchComponent } from "../components/search/search.component";
+
 
 const Routes: Routes = [
     {path: '', redirectTo:'/index', pathMatch: 'full'},
     {path: 'car', component: CarComponent},
-    {path: 'details', component: DetailsComponent},
+    {path: 'details/:id', component: DetailsComponent},
     {path: 'index', component: IndexComponent},
-<<<<<<< HEAD
     {path: 'list/:category', component: ListComponent},
     {path: 'login', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'hotshop', component: HotshopComponent},
+    {path: 'search', component: SearchComponent},
 
-=======
     {path: 'list', component: ListComponent},
     {path: 'login', component: LoginComponent,children:[
         {path:'login1',component:Login1Component},
@@ -33,7 +31,6 @@ const Routes: Routes = [
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'my', component: MyComponent},
->>>>>>> a5dd221b75ae19702765b58d3fa4cff379fe87df
 ];
 
 

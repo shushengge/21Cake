@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpclientService } from "../../servers/httpclient.service"
-
+import { Router,ActivatedRoute,ParamMap } from '@angular/router'
 
 @Component({
   selector: 'index',
@@ -9,12 +9,10 @@ import { HttpclientService } from "../../servers/httpclient.service"
 })
 export class IndexComponent implements OnInit {
 
-    constructor(private http: HttpclientService ) { }
+    constructor(private http: HttpclientService , private router : Router) { }
 
-<<<<<<< HEAD
-    
     dataset : Array<any>;
-
+    link:string=this.http.baseurl+"temp/";
     ngOnInit() {
         this.http.get('frontProducts?page=1&limit=7').then((res)=>{
             console.log(res)
@@ -46,16 +44,19 @@ export class IndexComponent implements OnInit {
             slidesPerView: "auto",
             centeredSlides: true,
             coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows : true
-        });  
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows : true
+            },
+        })
     }
-=======
-  ngOnInit() {
-  }
->>>>>>> a5dd221b75ae19702765b58d3fa4cff379fe87df
+    
+    goto(){
+        this.router.navigate(['/search']);
+
+    }
+  
 
 }

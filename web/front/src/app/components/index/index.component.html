@@ -1,4 +1,7 @@
 <header></header>
+<div class="searchbox">
+    <input type="text" placeholder="点点恩惠,美味回馈"  (click)="goto()"/>
+</div>
 <div id="cake">
     <div class="banner">
          <div  class="swiper-container">  
@@ -72,7 +75,7 @@
             <ul class="shop_goods">
                 <li *ngFor = "let item of dataset">
                     <a href="">
-                         <img src="{{item.imgindex}}" alt="" />
+                         <img src="{{link+item.imgindex}}" alt="" />
                     </a>
                    <div class="bottom_price_cart">
                        <a href="">
