@@ -16,7 +16,7 @@ const Routes: Routes = [
     {path: 'car', component: CarComponent},
     {path: 'details', component: DetailsComponent},
     {path: 'index', component: IndexComponent},
-    {path: 'list/:category', component: ListComponent},
+    {path: 'list', component: ListComponent},
     {path: 'hotshop', component: HotshopComponent},
     {path: 'login', component: LoginComponent,children:[
         {path:'login1',component:Login1Component},

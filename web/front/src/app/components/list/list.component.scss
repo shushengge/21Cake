@@ -16,6 +16,7 @@
             left:0;
             li{
                 line-height:1.3rem;
+                font-size:24px;
             }
             .active{
                 border-bottom:0.053333rem solid #684029;
@@ -39,6 +40,7 @@
             }
             .dosing{
                 color:#DFC4A7;
+                font-size:24px;
             }
         }
         ul{
@@ -77,9 +79,27 @@
         }
         .upload{
             font-size:30px;
-            margin-top:0.533333rem;
+            margin-top:0.666667rem;
             display:flex;
             justify-content:center;            
         }
+        .hint{
+            text-align:center;
+            margin-top:1.066667rem;
+            font-size:24px;
+            color:#684029;
+        }
     }
+}
+
+
+@media screen and (min-width:992px){
+    .list .nav ul li{ font-size:50px; }
+    .list .content .tag .cate{ font-size:50px; }
+    .list .content .tag .dosing{ font-size:50px; }
+    .list .content ul li .des{ font-size:50px; }
+    .list .content ul li .des .buy i{ font-size:60px; }
+    .list .content .upload{ font-size:60px; }
+    .list .content .hint{ font-size:50px; }
+
 }
