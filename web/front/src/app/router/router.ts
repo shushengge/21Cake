@@ -6,16 +6,29 @@ import { IndexComponent } from "../components/index/index.component";
 import { ListComponent } from "../components/list/list.component";
 import { LoginComponent } from "../components/login/login.component";
 import { RegisterComponent } from "../components/register/register.component";
+import { HotshopComponent } from '../components/hotshop/hotshop.component'
 import { MyComponent } from "../components/my/my.component";
 import { Login1Component } from "../components/login/login1/login1.component";
 import { Login2Component } from "../components/login/login2/login2.component";
+<<<<<<< HEAD
+import { SearchComponent } from "../components/search/search.component";
+
+=======
+>>>>>>> b68d336aa34d57af191e50a73e1b96dbfa25afb6
 
 const Routes: Routes = [
     {path: '', redirectTo:'/index', pathMatch: 'full'},
     {path: 'car', component: CarComponent},
-    {path: 'details', component: DetailsComponent},
+    {path: 'details/:id', component: DetailsComponent},
     {path: 'index', component: IndexComponent},
+    {path: 'list/:category', component: ListComponent},
+    {path: 'hotshop', component: HotshopComponent},
+<<<<<<< HEAD
+    {path: 'search', component: SearchComponent},
+
     {path: 'list', component: ListComponent},
+=======
+>>>>>>> b68d336aa34d57af191e50a73e1b96dbfa25afb6
     {path: 'login', component: LoginComponent,children:[
         {path:'login1',component:Login1Component},
         {path:'login2',component:Login2Component}

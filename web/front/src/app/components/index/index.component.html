@@ -1,2 +1,164 @@
 <header></header>
-<h1>我是首页</h1>
+<div class="searchbox">
+    <input type="text" placeholder="点点恩惠,美味回馈"  (click)="goto()"/>
+</div>
+<div id="cake">
+    <div class="banner">
+         <div  class="swiper-container">  
+            <div  class="swiper-wrapper">  
+                <div class="swiper-slide">  
+                    <img src="../../../assets/img/banner1.jpg" height="400" width="750" alt="" />
+                </div>  
+                <div class="swiper-slide">  
+                    <img src="../../../assets/img/banner2.jpg" height="400" width="750" alt="" />
+                </div>  
+                 <div class="swiper-slide">  
+                    <img src="../../../assets/img/banner3.jpg" height="400" width="750" alt="" />
+                </div>  
+                 <div class="swiper-slide">  
+                    <img src="../../../assets/img/banner4.jpg" height="400" width="750" alt="" />
+                </div>  
+            </div>  
+            <div class="swiper-pagination"></div>
+        </div>  
+    </div>
+    <div class="cake_home">
+        <ul class="cake_home_news">
+            <li>
+                <i class="cake_home_icon"></i>
+                新人首单赠小切块
+            </li>
+            <li>
+                <i class="cake_home_icon"></i>
+                满百包邮
+            </li>
+            <li>
+                <i class="cake_home_icon"></i>
+                千万用户选择
+            </li>
+        </ul>
+        <ul class="cake_home_memu">
+            <li>
+                <a routerLink="/list/cake">
+                    <img src="../../../assets/img/cake.png"  />
+                    蛋糕
+                </a>
+            </li>
+            <li>
+                <a routerLink="/list/coffee">
+                    <img src="../../../assets/img/coffe.png"  />
+                    咖啡
+                </a>
+            </li>
+            <li>
+                <a routerLink="/list/shortcake">
+                    <img src="../../../assets/img/qiekuai.png"  />
+                    小切块
+                </a>
+            </li>
+            <li>
+                <a routerLink="/list/企业专区">
+                    <img src="../../../assets/img/qiye.png"  />
+                    企业专区
+                </a>
+            </li>
+        </ul>
+        <div class="cake_home_good">
+            <h3 class="title-goods">
+                <span>人气</span>
+   
+                <a routerLink="/hotshop">
+                    更多
+                    <i class="title_goods_icon"></i>
+                </a>
+            </h3>
+            <ul class="shop_goods">
+                <li *ngFor = "let item of dataset" (click)="jump(item._id)">
+                    <a >
+                         <img src="{{link+item.imgindex}}" alt="" />
+                    </a>
+                   <div class="bottom_price_cart">
+                       <a >
+                           <h4>
+                               <span class="title">{{item.cnname}}</span>
+                               <span class="price">{{item.price}}</span><span>元/2.0磅</span>
+                           </h4>
+                           <p>{{item.title}}</p>
+                       </a>
+                       <button class="addcar">
+                           <i class="addcar_icon"></i>
+                       </button>
+                   </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="cake_home_active">
+            <h3>
+                <span>廿一客·活动</span>
+            </h3>
+            <div class="mould_activity_box ">
+                <a href="">
+                    <div class="left_txt">
+                        <h4>新客权益</h4>
+                        <p>点击查看</p>
+                        <span>只剩266天</span>
+                    </div>
+                    <div class="right_img">
+                        <img src="../../../assets/img/newpro.jpg" />
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="cake_home_article">
+            <h3>
+                <span>廿一客·文章</span>
+            </h3>
+            <div class="home-community-content">
+                <div class="swiper-flower">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="div_img"></div>
+                                <h6>二月刊·蛋糕.JPEG</h6>
+                                <p></p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="div_img" style="background-image:url(../../../assets/img/3.jpg)"></div>
+                                <h6>一月刊·姜.JPEG</h6>
+                                <p></p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="div_img" style="background-image:url(../../../assets/img/4.jpg)"></div>
+                                <h6>十二月刊·松子.JPEG</h6>
+                                <p></p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="">
+                                <div class="div_img" style="background-image:url(../../../assets/img/5.jpg)"></div>
+                                <h6>十一月刊·栗子.JPEG</h6>
+                                <p></p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 如果需要分页器 -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                    
+                    <!-- 如果需要导航按钮 -->
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div> -->
+                    
+                    <!-- 如果需要滚动条 -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer></footer>
+

@@ -1,0 +1,48 @@
+ <div class="searchInfo">
+    <section class="searchInfo_top">
+        <form class="mallSearchform">
+            <div class="mallSearchform_s">
+                <input type="text" class="mallSearchform_txt" placeholder="我就知道你会选我的，爸爸..." (keyup)="find()"/>
+                <input type="button" class="mallSearchform_btn"/>
+            </div>
+        </form>
+        <div class="searchClose" (click)="back()"></div>
+    </section>
+    <div class="SearchContentC">
+         <ul class="SearchContent">
+            <li *ngFor = "let item of dataset" (click)="goto(item._id)">
+              {{item.cnname}}
+            </li>
+        </ul>
+    </div>
+    <section class="searchIndex">
+        <div class="searchIndexW">
+            <div class="searchHot">
+                <div class="searchHotShop">热门搜索</div>
+                <ul class="searchHotShopUl clearfix">
+                    <li>
+                        <a>榴莲千层</a>
+                    </li>
+                    <li>
+                        <a>芒果千层</a>
+                    </li>
+                    <li>
+                        <a>巧克力</a>
+                    </li>
+                    <li>
+                        <a>咖啡</a>
+                    </li>
+                    <li>
+                        <a>慕斯</a>
+                    </li>
+                    <li>
+                        <a>情人</a>
+                    </li>
+                    <li>
+                        <a>提拉米苏</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>

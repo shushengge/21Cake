@@ -1,0 +1,35 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-10 14:33:39
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-10 14:33:39
+*/
+#foot{
+    background: #414141;
+    padding: 0.8rem 0.266667rem;
+    font-size: 0.32rem;
+    color: #442818;
+    ul{
+        overflow: hidden;
+        margin-left: -2%;
+        li{
+            float: left;
+            width: 23%;
+            margin-left: 2%;
+            margin-bottom: 23px;
+            a{
+                height: 0.8rem;
+                display: block;
+                border: 1px solid #979797;
+                color: #979797;
+                line-height: 0.8rem;
+                text-align: center;
+            }
+        }
+    }
+    p{
+        text-align: center;
+        color: #a0a0a0;
+        line-height: 0.426667rem;
+    }
+}
