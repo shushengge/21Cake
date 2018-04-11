@@ -95,11 +95,9 @@ export class Login2Component implements OnInit {
         var countdown=60; 
         function settime(val) { 
             if (countdown == 0) {
-                this.note=Math.random()
                 val.attr("disabled",false);
                 val.val("获取验证码"); 
                 countdown = 60; 
-                console.log(this.note)
                 return
             } else { 
                 val.attr("disabled", true);
