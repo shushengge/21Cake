@@ -24,8 +24,8 @@ export class MyComponent implements OnInit {
         if(con==true){
             this.router.navigate(['index'])
             sessionStorage.removeItem("username");
-        }else {
-            this.router.navigate(['my']);
+            sessionStorage.removeItem('xxtoken')
+            sessionStorage.removeItem('userid')
         }
   }
 
