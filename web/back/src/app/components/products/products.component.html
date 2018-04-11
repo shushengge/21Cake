@@ -1,0 +1,36 @@
+<div class="products_box box">
+    <div class="products_head head">
+      <h2>商品</h2>
+    </div>
+    <div class="products_nav nav">
+      <i class="fa fa-home wel"></i>
+      <span>商品管理</span>
+      <i class="fa fa-angle-right"></i>
+    </div>
+    <div class="products_describe describe">
+      <span>商品页面，添加商品，编辑，下架，删除，都可以配置单独的权限，后台简单调用权限接口，每个按钮和文字都可以控制，并在后台管理中给其他人配置操作权限。</span>
+    </div>
+    <div class="products_form form">
+        <div class="form_head">
+          所有商品
+        </div>
+        <div class="form_search">
+            <input type="text" name="search" placeholder="搜索" class="inp">
+            <input type="button" name="search" value="搜索" class="btn">
+        </div>
+        <div class="form_content">
+              <table *ngIf="dataset">
+                <thead>
+                    <tr>
+                        <th *ngFor="let key of getKeys(dataset[0])">{{key}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of dataset">
+                        <td *ngFor="let key of getKeys(item)">{{item[key]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
