@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ "jquery"
+import * as $ from "jquery"
 
 @Component({
   selector: 'login1',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import '../../../assets/common/base.css';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import * as $ "jquery"
+import * as $ from "jquery"
 import { HttpclientService } from "../../servers/httpclient.service"
 
 @Component({
