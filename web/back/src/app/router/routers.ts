@@ -11,7 +11,7 @@ import { IndentComponent } from '../components/indent/indent.component'
 
 
 const routes: Routes = [
-    {path:'login', component:LoginComponent},
+    {path:'', component:LoginComponent},
     {path:'home', component:HomeComponent,children:[
         {path:'welcome',component:WelcomeComponent},
         {path:'users',component:UsersComponent},

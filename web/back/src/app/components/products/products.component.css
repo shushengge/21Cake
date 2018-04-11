@@ -1,69 +1,108 @@
-.box .describe{
-    padding: 15px 30px 15px 15px;
-    margin: 30px 0;
-    border-left: 3px solid #bbdba1;
-    background-color: #eef7ea;
+.box .describe {
+  padding: 15px 30px 15px 15px;
+  margin: 30px 0;
+  border-left: 3px solid #bbdba1;
+  background-color: #eef7ea;
 }
-.box .form{
-    height:380px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #bbdba1;
+
+.box .form {
+  /* height: 450px; */
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #bbdba1;
+  display: auto;
 }
-.box .form .form_head{
-    background-color: #bbdba1;
-    height: 50px;
-    padding-left: 20px;
-    font-size: 20px;
-    line-height: 50px;
-    color: white;
-}
-.box .form .form_search{
+
+.box .form .form_head {
+  background-color: #bbdba1;
   height: 50px;
-  /* text-align: center; */
+  padding-left: 20px;
+  font-size: 20px;
   line-height: 50px;
-  position: relative;
-  width: 420px;
+  color: white;
+}
+
+.box .form .form_nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 0 0;
+}
+
+.box .form .form_search {
+  height: 50px;
+  width: 280px;
   margin: 0 20px;
 }
-.box .form .form_search input{
-    border-radius: 20px;
-    outline: none;
-    /* appearance: button; */
-}
-.box .form .form_search .inp{
-  height: 30px;
-  line-height: 30px;
-  width: 400px;
-  padding-left: 20px;
-}
-.box .form .form_search .btn{
+.box .form .form_nav .add{
   height: 34px;
-  line-height: 30px;
+}
+.box .form .form_nav .add .addbtn{
+  height: 34px;
+}
+
+
+
+.box .form .form_search input {
+  outline: none;
+}
+
+.box .form .form_search .inp {
+  height: 34px;
+  width: 200px;
+}
+
+.box .form .form_search .btn {
+  height: 34px;
   width: 80px;
-  border: none;
-  border-radius:0  20px 20px 0;
-  position: absolute;
-  right: -3px;
-  top: 9px;
-  background-color:#bbdba1 ;
-  color:white;
 }
-.box .form .form_content{
-    padding:10px 20px 20px 20px;
+
+.box .form_page {
+  height: 50px;
+  margin: 0 auto;
 }
-.box .form .form_content table{
-    border-collapse: collapse;
-    width: 100%;
+
+.box .form_page .page {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 }
-.box .form .form_content table thead{
-    font-size: 14px;
-    font-weight: 600;
+
+.box .page div {
+  height: 36px;
+  width: 36px;
+  line-height: 36px;
+  text-align: center;
+  border: 1px solid blue;
+  border-left: 0px;
+  color: blue;
 }
-.box .form .form_content table tr th,td{
-    border: 1px solid;
-    height: 20px;
-    padding: 5px;
-    text-align: center;
-    line-height: 20px;
+
+.box .page div:first-child {
+  border-left: 1px solid;
+}
+
+.box .page div:first-child {
+  border-left: 1px solid;
+}
+
+.box .form .form_content {
+  /* height: 355px; */
+  padding: 0 20px;
+  overflow: auto;
+}
+
+.last-td {
+  display: flex;
+  justify-content: center;
+}
+input {
+  flex: 1;
+}
+
+th {
+  min-width: 70px;
+}
+
+.yincang {
+  display: none;
 }
