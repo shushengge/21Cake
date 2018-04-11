@@ -1,0 +1,28 @@
+.box{
+  color:rgb(51, 51, 51);
+  box-sizing:border-box;
+}
+.box .nav{
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  background-color: #cecece;
+  opacity: 0.9;
+  /* padding-left: 20px; */
+  box-sizing:border-box;
+}
+.box .nav i{
+  color:#aaa;
+  display: inline-block;
+  padding:0 10px;
+}
+.box .content{
+  margin-top: 40px;
+}
+.box .content .main{
+  box-sizing:border-box;
+  width: 100%;
+  padding: 20px 20px;
+  background-color: #cecece;
+  opacity: 0.9;
+}

@@ -1,0 +1,128 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-10 14:49:34
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-10 14:49:34
+*/
+.searchInfo{
+    width: 100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:10000;
+    background:#fff;
+    .searchInfo_top{
+        padding: 0.266666rem 0;
+        position: relative;
+        background:#fff;
+        border-bottom: 1px solid #ccc;
+        .mallSearchform{
+            margin-left: 1.000rem;
+            margin-right: 0.266666rem;
+            .mallSearchform_s{
+                background:#fff;
+                margin: 0 auto;
+                position: relative;
+                .mallSearchform_txt{
+                    background-image: none;
+                    background-color: #fff;
+                    height: 0.90666rem;
+                    padding-right: 2.05rem  ;
+                    display: block;
+                    width: 100%;
+                    position: relative;
+                    border-radius: 0.08rem;
+                    border: 1px solid #ccc;
+                    padding: 0 0.8rem 0 0.266666rem;
+                    box-sizing: border-box;
+                    font-size: 0.37222rem;
+                }
+                .mallSearchform_btn{
+                    position:absolute;
+                    display:block;
+                    height: 0.853333rem;
+                    width: 1.146667rem;
+                    border:0;
+                    border-left: 1px solid #ccc;
+                    top: 0.026667rem;
+                    right: 1px;
+                    background: url(//i1.ygimg.cn/m/images/ico-srch.a458b193.png) center center no-repeat;
+                    background-size: 0.426667rem auto;
+                    border-radius: 0 0.08rem 0.08rem 0;
+                    background-color: #F1F1F1;
+
+                }
+            }
+        }
+        .searchClose{
+            position:absolute;
+            width: 1.0222rem;
+            height:0.74666rem;
+            top: 0.346666rem;
+            left: 0;
+            background: url(//i1.ygimg.cn/m/images/ico-close.35b77a95.png) center center no-repeat;
+            background-size: 0.4rem auto;
+        
+        }
+    }
+}
+
+.searchIndex{
+    padding-top: 0;
+    position: relative;
+    background:#fff;
+    .searchIndexW{
+        height: 100%;
+        .searchHot{
+            background: #fff;
+            padding: 0px 0.18666rem 0.0532224rem 0.18666rem;
+            .searchHotShop{
+                border: 0;
+                margin-left: 0.12222rem;
+                background: url(//i1.ygimg.cn/m/images/listview/hot.0c4d8d63.png) center left no-repeat;
+                background-size: 0.32rem auto;
+                color: #666;
+                font-size: 0.372222rem;
+                padding: 0.32rem 0 0.32rem 0.52222rem;
+            }
+            ul{
+                li{
+                    float: left;
+                    margin: 0 0.122222rem 0.266666rem;
+                    a{
+                        display: block;
+                        color: #666;
+                        padding: 0.08rem 0.32rem;
+                        background: #eee;
+                        border-radius: 0.122222rem;
+                        font-size: 0.37222rem;
+                        line-height: 0.64rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.SearchContentC{
+    width: 100%;
+    background: #fff;
+    padding: 0 0.32rem;
+    position:absolute;
+    top:1.4666rem;
+    left:0;
+    z-index:998;
+    .SearchContent{
+        li{
+            border-bottom: 1px solid #ddd;
+            padding: 0.4rem 0;
+            font-size: 0.36222rem;
+            line-height: 0.452222rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            position: relative;
+            overflow: hidden;
+        }
+    }
+}

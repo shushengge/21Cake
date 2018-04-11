@@ -1,4 +1,7 @@
 <header></header>
+<div class="searchbox">
+    <input type="text" placeholder="点点恩惠,美味回馈"  (click)="goto()"/>
+</div>
 <div id="cake">
     <div class="banner">
          <div  class="swiper-container">  
@@ -36,19 +39,19 @@
         </ul>
         <ul class="cake_home_memu">
             <li>
-                <a routerLink="/list/蛋糕">
+                <a routerLink="/list/cake">
                     <img src="../../../assets/img/cake.png"  />
                     蛋糕
                 </a>
             </li>
             <li>
-                <a routerLink="/list/咖啡">
+                <a routerLink="/list/coffee">
                     <img src="../../../assets/img/coffe.png"  />
                     咖啡
                 </a>
             </li>
             <li>
-                <a routerLink="/list/小切块">
+                <a routerLink="/list/shortcake">
                     <img src="../../../assets/img/qiekuai.png"  />
                     小切块
                 </a>
@@ -70,12 +73,12 @@
                 </a>
             </h3>
             <ul class="shop_goods">
-                <li *ngFor = "let item of dataset">
-                    <a href="">
-                         <img src="{{item.imgindex}}" alt="" />
+                <li *ngFor = "let item of dataset" (click)="jump(item._id)">
+                    <a >
+                         <img src="{{link+item.imgindex}}" alt="" />
                     </a>
                    <div class="bottom_price_cart">
-                       <a href="">
+                       <a >
                            <h4>
                                <span class="title">{{item.cnname}}</span>
                                <span class="price">{{item.price}}</span><span>元/2.0磅</span>
