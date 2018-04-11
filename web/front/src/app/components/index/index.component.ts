@@ -12,6 +12,7 @@ export class IndexComponent implements OnInit {
   constructor(private http: HttpclientService ) { }
 
   ngOnInit() {
+  console.log(this.http);
   }
 
 }

@@ -1,8 +1,85 @@
 .list{
     height:100%;
     display:flex;
+    flex-direction:column;
+    .nav{
+        height:1.333333rem;
+        overflow:hidden;
+        position:relative;
+        ul{
+            height:1.333333rem;
+            display:flex;
+            justify-content:space-around;
+            width:16.0rem;
+            position:absolute;
+            top:0;
+            left:0;
+            li{
+                line-height:1.3rem;
+            }
+            .active{
+                border-bottom:0.053333rem solid #684029;
+                color:#684029;
+            }
+        }
+    }
     .content{
         flex:1;
-        background:red;
+        overflow-x:hidden;
+        .tag{
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            background:#FBF9F6;
+            height:1.28rem;
+            border-bottom:0.026667rem solid #ccc;
+            .cate{
+                font-size:25px;
+            }
+            .dosing{
+                color:#DFC4A7;
+            }
+        }
+        ul{
+            display:flex;
+            flex-wrap:wrap;
+            li{
+                width:50%;
+                height:5.92rem;
+                padding:0.533333rem;
+                img{
+                    width:4.0rem;
+                    height:4.0rem;
+                }
+                .des{
+                    display:flex;
+                    flex-direction:column;
+                    justify-content:space-around;
+                    color:#442818;
+                    font-size:26px;
+                    .cnname{
+                        margin-bottom:0.133333rem;
+                    }
+                    .buy{
+                        display:flex;
+                        justify-content:space-between;
+                        .price{
+                            color:#C1A488; 
+                        }
+                        i{
+                            font-size:40px;
+                            color:#684029;
+                        }
+                    }
+                }
+            }
+        }
+        .upload{
+            font-size:30px;
+            margin-top:0.533333rem;
+            display:flex;
+            justify-content:center;            
+        }
     }
 }
