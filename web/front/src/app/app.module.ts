@@ -43,6 +43,7 @@ import { Login2Component } from './components/login/login2/login2.component';
     FooterComponent ,
     Login1Component,
     Login2Component,
+    MyComponent ,
     MyComponent
   ],
   imports: [

@@ -1,2 +1,167 @@
 <header></header>
-<h1>我是详情页</h1>
+<div class="lx-detail">
+	<div class="swiper">
+		<div class="swiper-trans">
+			<ul>
+				<li>
+					<img src="http://static.21cake.com//upload/images/ac9a54aed43bd245aa2185e8a92add46.jpg" alt="Chinese Date 枣儿">
+				</li>
+			</ul>
+		</div>
+		<div class="detail-pagination"></div>
+	</div>
+	<div class="detail-pro-box">
+		<div class="detail-box-title">
+			<h3>Chinese Date</h3>
+			<p>枣儿</p>
+		</div>
+		<p class="pro-price">￥298</p>
+		<div class="pro-detail-label">
+			<a href="#">聚会&nbsp;</a>
+			<a href="#">新品&nbsp;</a>
+		</div>
+		<ul class="detail-taste clearfix">
+			<li class="fl">
+				<img src="http://static.21cake.com//themes/wap/img/goods/icon/micon-38.png" alt="枣子">枣子
+			</li>
+			<li class="fl">
+				<img src="http://static.21cake.com//themes/wap/img/goods/icon/micon-33.png" alt="奶油">奶油
+			</li>
+		</ul>
+		<div class="select-card">
+			<span class="show-options" (click)="showSuspension($event,1)">已选择：2.0英镑<i class="jt"></i></span>
+			<div class="detail-options-card">
+				<ul class="clearfix ls">
+					<li>17&times;17cm</li>
+					<li>含10套餐具</li>
+					<li>适合7-8人分享</li>
+					<li>最早今天17:30配送</li>
+				</ul>
+				<ul class="store-info">
+					<li class="clearfix">
+						<span class="sp1">保鲜条件</span>
+						<span class="sp2">0~4℃保藏12小时，5℃使用最佳</span>
+					</li>
+					<li class="li2 clearfix">
+						<span class="sp1">参考甜度</span>
+						<span class="sp2 sweet-list">
+							<i class="active"></i>
+							<i class="active"></i>
+							<i class="active"></i>
+							<i></i>
+							<i></i>
+						</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="wenzi">
+		<p>红枣奶油戚风，雨姜撞奶慕斯</p>
+		<p>温暖、绵延，日常题材的一闪灵感</p>
+	</div>
+	<div class="detail-img">
+		<ul class="">
+			<li>
+				<img src="http://static.21cake.com/public/images/ba/90/3a/6c3e24d18f5e96b22cf81081b8e5909d.jpg?1516843014#w">
+			</li>
+		</ul>
+		<p style="text-align: center;">以上图片仅供参考，请以收到实物为准。</p>
+	</div>
+	<div class="recommend-list">
+		<p class="tj-header">·推荐商品·</p>
+		<ul class="clearfix">
+			<li>
+				<a href="#" class="to-del">
+					<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
+					<h4>芒果奶油蛋糕</h4>
+					<p class="cake-price">￥198.00/2.0磅</p>
+					<span class="recommend-cart"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="to-del">
+					<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
+					<h4>芒果奶油蛋糕</h4>
+					<p class="cake-price">￥198.00/2.0磅</p>
+					<span class="recommend-cart"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="to-del">
+					<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
+					<h4>芒果奶油蛋糕</h4>
+					<p class="cake-price">￥198.00/2.0磅</p>
+					<span class="recommend-cart"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="to-del">
+					<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
+					<h4>芒果奶油蛋糕</h4>
+					<p class="cake-price">￥198.00/2.0磅</p>
+					<span class="recommend-cart"></span>
+				</a>
+			</li>
+		</ul>
+		<!-- <div style="background-color:#fff; position: relative;">
+			<p>的窘境啊</p>
+		</div> -->
+	</div>
+	<div class="detail-addcart">
+		<span class="left-buy">立即购买</span>
+		<span class="join-cart">加入购物车</span>
+	</div>
+	<div class="detail-footer">
+		<ul>
+			<li>
+				<a href="#">下载App</a>
+			</li>
+			<li>
+				<a href="#">联系我们</a>
+			</li>
+			<li>
+				<a href="#">全站公告</a>
+			</li>
+			<li>
+				<a href="#">生产经营资质</a>
+			</li>
+		</ul>
+		<p>Copyright© 21Cake蛋糕官网商城 2007-2017, </p>
+		 <p>版权所有京ICP备14006254号-1 </p>
+		 <p>网站注册公司名称: 北京廿一客食品有限公司</p>
+	</div>
+	<div class="detail-suspension">
+		<i class="suspension-hide" (click)="showSuspension($event,0)"></i>
+		<div class="detail-suspension-content ">
+			<span class="hide-btn" (click)="showSuspension($event,0)">&times;</span>
+			<p class="price">￥298.00</p>
+			<div class="suspension-options clearfix">
+				<img src="http://static.21cake.com//themes/wap/img/2.00P-full-17.00.jpg" alt="" class="size-img fl">
+				<ul class="clearfix fl">
+					<li>17&times;17cm</li>
+					<li>含10套餐具</li>
+					<li>适合7-8人分享</li>
+					<li>最早今天17:30配送</li>
+				</ul>
+			</div>
+			<div class="pro-normal">
+				<p>商品规格</p>
+				<ul class="clearfix" (click)="selectWeg($event)">
+					<li >1.0磅</li>
+					<li class="active">2.0磅</li>
+					<li>3.0磅</li>
+					<li>5.0磅</li>
+				</ul>
+			</div>
+			<div class="markup-list">
+				<p>换购商品</p>
+				<div class="list-msg">
+					<img src="http://static.21cake.com/public/images/b5/8c/9e/171c39a4cf9998365937b03993a55fb0.jpg" alt="">
+					<p>搭配其它商品，享受更多优惠</p>
+					<p>改冰包仅适用于2磅及以下规格蛋糕</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

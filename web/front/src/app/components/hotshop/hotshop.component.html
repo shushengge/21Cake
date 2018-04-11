@@ -6,20 +6,20 @@
     </div>
     <div class="list_box">
         <ul>
-            <li *ngFor = "let item of dataset">
+            <li *ngFor = "let item of dataset" (click)="goto(item._id)">
                 <div class="list_pro_content">
-                    <a href="">
-                        <img src="{{item.imgurl}}" alt="" />
+                    <a>
+                        <img src="{{link+item.img}}" alt="" />
                         <h3>
-                            {{item.cnname}}
-                            <span>{{item.cnpro}}</span>
+                            {{item.enname}}
+                            <span>{{item.cnname}}</span>
                         </h3>
                         <span class="price">￥{{item.price}}.00/2.0磅</span>
                         <div class="label">
                             <img src="../../../assets/img/rq.png" />
                         </div>
                     </a>
-                    <a href="" class="cart-add">
+                    <a  class="cart-add">
                         <img src="../../../assets/img/buycar2.png"/>
                     </a>
                 </div>
