@@ -27,8 +27,8 @@ export class IndexComponent implements OnInit {
             autoplay: {
                 delay: 3000,
                 stopOnLastSlide: false,
-                disableOnInteraction: false,
-            },
+                disableOnInteraction: false
+            }
         });  
 
         var swiper2 = new Swiper('.swiper-flower',{  
@@ -59,7 +59,7 @@ export class IndexComponent implements OnInit {
       
     jump(id){
         this.router.navigate(['/details/'+id]);
-        
+        });  
     }
 
 }

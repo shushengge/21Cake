@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import '../../../assets/common/base.css';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import * as $ "jquery"
+import * as $ from "jquery"
 import { HttpclientService } from "../../servers/httpclient.service"
 
 @Component({
@@ -11,7 +11,7 @@ import { HttpclientService } from "../../servers/httpclient.service"
 })
 export class LoginComponent implements OnInit {
 
-  constructor( private router: Router,private http: HttpclientService) { }
+  constructor( private router: Router, private http: HttpclientService) { }
 
   ngOnInit() {
         this.router.navigate(['login/login1']);
@@ -27,14 +27,15 @@ export class LoginComponent implements OnInit {
         $('.li-left').removeClass('high')
   }
   tologin(){
-        this.http.get('login',{username:$('.username').val(),password:$('.password').val()}).then((res) => {
-            if(res.status){
-              this.router.navigate(['index']
-            }else{
-              $('.hint').val('登录信息有误')
-              $('.username').val('')
-              $('.password').val('')
-              $('.username').focus()
-            }
-        }
+        this.http.get('login',{ username:$('.username').val(), password:$('.password').val() }).then((res) => {
+            // if(res.status){
+            //   this.router.navigate(['index'])
+            //   }else{
+            //   $('.hint').val('登录信息有误')
+            //   $('.username').val('')
+            //   $('.password').val('')
+            //   $('.username').focus()
+            // }
+        })
     }
+}
