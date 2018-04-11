@@ -1,0 +1,30 @@
+<header></header>
+<div id="hotshop">
+    <img src="../../../assets/img/renqi.jpg" height="300" width="750" alt="" />
+    <div class="pro_list_title">
+        <h2>人气</h2>
+    </div>
+    <div class="list_box">
+        <ul>
+            <li *ngFor = "let item of dataset">
+                <div class="list_pro_content">
+                    <a href="">
+                        <img src="{{item.imgurl}}" alt="" />
+                        <h3>
+                            {{item.cnname}}
+                            <span>{{item.cnpro}}</span>
+                        </h3>
+                        <span class="price">￥{{item.price}}.00/2.0磅</span>
+                        <div class="label">
+                            <img src="../../../assets/img/rq.png" />
+                        </div>
+                    </a>
+                    <a href="" class="cart-add">
+                        <img src="../../../assets/img/buycar2.png"/>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<footer></footer>

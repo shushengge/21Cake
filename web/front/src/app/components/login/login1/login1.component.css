@@ -1,0 +1,4 @@
+.login-cont ul li{height:1.253333rem;}
+.login-cont ul li input{padding:0.266667rem 0;border:0 none;border-bottom:1px solid #969696;width:100%;font-size:0.373333rem;height:100%;}
+.login-cont ul li input::-webkit-input-placeholder{color:#D5BFA7;}
+.login-cont ul li .hint{border:0 none;color:#FF2626;}

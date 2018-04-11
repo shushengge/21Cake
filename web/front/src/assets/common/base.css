@@ -25,3 +25,5 @@ a:hover{
 	text-decoration:underline;}
 i{font-style:normal;}
 *{box-sizing:border-box;}
+.fl{float:left;}
+.fr{float:right;}
