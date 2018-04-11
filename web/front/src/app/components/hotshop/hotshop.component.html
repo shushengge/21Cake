@@ -6,9 +6,9 @@
     </div>
     <div class="list_box">
         <ul>
-            <li *ngFor = "let item of dataset">
+            <li *ngFor = "let item of dataset" (click)="goto(item._id)">
                 <div class="list_pro_content">
-                    <a href="">
+                    <a>
                         <img src="{{link+item.img}}" alt="" />
                         <h3>
                             {{item.enname}}
@@ -19,7 +19,7 @@
                             <img src="../../../assets/img/rq.png" />
                         </div>
                     </a>
-                    <a href="" class="cart-add">
+                    <a  class="cart-add">
                         <img src="../../../assets/img/buycar2.png"/>
                     </a>
                 </div>

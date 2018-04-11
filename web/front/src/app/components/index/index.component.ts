@@ -55,8 +55,11 @@ export class IndexComponent implements OnInit {
     
     goto(){
         this.router.navigate(['/search']);
-
     }
-  
+      
+    jump(id){
+        this.router.navigate(['/details/'+id]);
+        
+    }
 
 }
