@@ -2,7 +2,7 @@ const db = require("../db");
 const filter = require("../utils/filter");
 module.exports = {
     register:(app) => {
-
+        // app.get("/insertOrder", filter, (req, res) => {
         // 插入订单
         app.get("/insertOrder", filter, (req, res) => {
             let params = req.query;
@@ -10,9 +10,11 @@ module.exports = {
                 res.send({status:true, data:result});
             }) 
         })
+        // 根据用户名获取该用户的订单，含有付款和未付款的订单
+        // app.get("")
 
         //根据用户id,状态对订单进行查询
-        app.get("/userOrder", filter , (req, res) => {
+        app.get("/userOrder", filter, (req, res) => {
             console.log(req.query);
             let userid = req.query.userid;
             let status = req.query.status;
@@ -31,7 +33,7 @@ module.exports = {
         
 
         // 更新用户订单
-        app.get("/UpdOrder", filter , (req, res) => {
+        app.get("/UpdOrder", filter, (req, res) => {
             let userid = req.query.userid;
             let status = req.query.status;
             let products = req.query.products;
@@ -42,7 +44,7 @@ module.exports = {
         })
 
         // 查询所有订单
-        app.get("/selectOrder" ,filter, (req, res) => {
+        app.get("/selectOrder", filter, (req, res) => {
             let page = req.query.page;
             let limit = req.query.limit;
             page1 = page ? (page-1)*limit : 0;
@@ -51,6 +53,5 @@ module.exports = {
                 res.send({status:true, count:result.length, data:result.slice(page1, limit1)});
             })  
         })
-
     }
 }

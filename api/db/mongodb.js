@@ -44,6 +44,15 @@ module.exports = {
         })
     },
 
+    // 修改特定字段的值    _condition: {_userid, _productid}
+    qtyUpdate:(_collection, _condition, _qty) =>{
+        return new Promise((resolve, reject) => {
+            db.db("projectAngular").collection(_collection).update(_condition, {"$set":{"qty": _qty}}).then((result, error)=>{
+                resolve(result);
+            })
+        })
+    },
+
     // 插入
     insert:(_colletion, _condition) => {
         return new Promise((resolve, reject) => {

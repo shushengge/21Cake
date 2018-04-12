@@ -15,7 +15,7 @@ module.exports = {
             page1 = page ? (page-1)*limit : 0;
             limit1 = limit ? page*limit : 99999;
             let pramas = new RegExp(title);
-            db.mongodb.select("products",{$or:[{title:pramas},{name:pramas},{category:pramas}]}).then((data) => {
+            db.mongodb.select("products",{$or:[{title:pramas},{cnname:pramas},{enname:pramas},{category:pramas}]}).then((data) => {
                 res.send({status:true, count:data.length, data:data.slice(page1, limit1)});
             })
         })

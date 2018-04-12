@@ -21,12 +21,23 @@ module.exports = {
             })
         });
 
+        // 新的用户注册之前判断该用户名是否已经存在
+        app.get("/usercheck", (req,res)=>{
+            let username = req.query.username;
+            db.mongodb.select("users", {username}).then((result)=>{
+                if(result && result.length>0){
+                    res.send({status:"no"});
+                }else{
+                    res.send({status:"yes"});
+                }  
+            })
+        })
 
-        // 用户注册
+        // 新的用户注册
         app.get("/register", (req, res) => {
             let username = req.query.username;
             let password = req.query.password;
-            let birthday = req.query.birthday;
+            let birthday = req.query.birthday || "1992-4-1";
             // let phone = req.query.phone;
             // let email = req.query.email;
             // let gender = req.query.gender;
