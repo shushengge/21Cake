@@ -26,6 +26,7 @@ import { MyComponent } from './components/my/my.component';
 import { Login1Component } from './components/login/login1/login1.component';
 import { Login2Component } from './components/login/login2/login2.component';
 import { LoadDirective } from './directives/load.directive';
+import { MyorderComponent } from './components/myorder/myorder.component';
 
 
 @NgModule({
@@ -44,8 +45,9 @@ import { LoadDirective } from './directives/load.directive';
     FooterComponent ,
     Login1Component,
     Login2Component,
-    MyComponent ,
+    MyComponent,
     LoadDirective,
+    MyorderComponent
   ],
   imports: [
     BrowserModule,
