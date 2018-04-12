@@ -12,6 +12,7 @@ import { Login1Component } from "../components/login/login1/login1.component";
 import { Login2Component } from "../components/login/login2/login2.component";
 import { SearchComponent } from "../components/search/search.component";
 
+
 const Routes: Routes = [
     {path: '', redirectTo:'/index', pathMatch: 'full'},
     {path: 'car', component: CarComponent},

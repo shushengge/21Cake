@@ -46,10 +46,9 @@ import { AlertComponent } from './components/alert/alert.component';
     FooterComponent ,
     Login1Component,
     Login2Component,
-    MyComponent,
+    MyComponent ,
     LoadDirective,
-    AlertComponent,
-    MyComponent
+    AlertComponent
   ],
   imports: [
     BrowserModule,

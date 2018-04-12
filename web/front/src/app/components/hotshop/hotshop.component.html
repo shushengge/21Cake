@@ -1,6 +1,6 @@
 <header></header>
 <div id="hotshop">
-    <img src="../../../assets/img/renqi.jpg" height="300" width="750" alt="" />
+    <img src="../../../assets/img/renqi.jpg"  width="100%" alt="" />
     <div class="pro_list_title">
         <h2>人气</h2>
     </div>
@@ -9,7 +9,7 @@
             <li *ngFor = "let item of dataset" (click)="goto(item._id)">
                 <div class="list_pro_content">
                     <a>
-                        <img src="{{link+item.img}}" alt="" />
+                        <img src="{{link+item.img}}" alt=""  />
                         <h3>
                             {{item.enname}}
                             <span>{{item.cnname}}</span>

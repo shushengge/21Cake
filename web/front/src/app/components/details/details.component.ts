@@ -18,9 +18,9 @@ export class DetailsComponent implements OnInit {
 		// console.log(e.target)
 		let susp = document.getElementsByClassName('detail-suspension')[0];
 		if(n===1){
-			susp.style.top = '0';
+			susp['style'].top = '0';
 		}else {
-			susp.style.top = '100%';
+			susp['style'].top = '100%';
 		}
 		
 	}

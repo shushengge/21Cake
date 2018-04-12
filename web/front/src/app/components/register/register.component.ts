@@ -136,6 +136,10 @@ export class RegisterComponent implements OnInit {
     toreg(){
         if($('.phone').val()!=''&&$('.user').val()!=''&&$('.pass').val()!=''&&$('.pass2').val()!=''&&$('.in-code').val()!=''&&$('.in-note').val()!=''){
             this.http.get('register',{ username:$('.user').val(), password:$('.pass').val()}).then((res) => {
+<<<<<<< HEAD
+                    console.log(res)
+=======
+>>>>>>> 58fec8d77ba2c29984959087ef6ca11b5cd61ab3
                  if(res['status']){
                    this.router.navigate(['login'])
                    }else{

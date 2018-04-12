@@ -15,7 +15,7 @@ export class Login1Component implements OnInit {
   ngOnInit() {
         
   }
-  username(){
+  username(){ 
     $('.hint').val('')
   }
     tologin(){
