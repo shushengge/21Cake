@@ -18,7 +18,7 @@
 				<div class="clearfix car-pro-num">
 					<span>
 						<img *ngIf="!showDel[idx]" src="http://static.21cake.com//themes/wap/img/-.png" class="img1" (click)="changeQty($event,idx,0)">
-						<img *ngIf="showDel[idx]" src="http://static.21cake.com/themes/wap/img/cart-order-delete.png" class="img-del">
+						<img *ngIf="showDel[idx]" src="http://static.21cake.com/themes/wap/img/cart-order-delete.png" class="img-del" (click)="delPro($event,item['productid'],idx)">
 					</span>
 
 					<!-- <span class="val">{{item['qty']}}</span> -->
@@ -36,37 +36,13 @@
 		<div class="car-dp">
 			<p class="dp-top">· 搭配商品 ·</p>
 			<ul class="clearfix">
-				<li>
-					<a href="javascript:void(0)" class="to-del">
-						<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
-						<h4>芒果奶油蛋糕</h4>
-						<p class="cake-price">￥198.00/2.0磅</p>
+				<li *ngFor="let item of proTjDataset">
+					<div class="to-del" (click)="gotoDetail($event,item['_id'],item)">
+						<img [src]="srcDelLink+item['img']" alt="">
+						<h4>{{item.cnname}}</h4>
+						<p class="cake-price">￥{{item.price}}/2.0磅</p>
 						<span class="recommend-cart"></span>
-					</a>
-				</li>
-				<li>
-					<a href="#" class="to-del">
-						<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
-						<h4>芒果奶油蛋糕</h4>
-						<p class="cake-price">￥198.00/2.0磅</p>
-						<span class="recommend-cart"></span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:void(0)" class="to-del">
-						<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
-						<h4>芒果奶油蛋糕</h4>
-						<p class="cake-price">￥198.00/2.0磅</p>
-						<span class="recommend-cart"></span>
-					</a>
-				</li>
-				<li>
-					<a href="javascript:void(0)" class="to-del">
-						<img src="http://m.21cake.com/upload/images/f5c184a98afac9e350304232c69b2bc5.jpg" alt="芒果奶油蛋糕">
-						<h4>芒果奶油蛋糕</h4>
-						<p class="cake-price">￥198.00/2.0磅</p>
-						<span class="recommend-cart"></span>
-					</a>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -84,12 +60,13 @@
 						<span>配送费</span>
 					</li>
 					<li class="li04">
-						<a href="javascript:void(0)" class="car-js">
+						<a href="javascript:void(0)" class="car-js" (click)="gotoOrder($event)">
 							去结算
 						</a>
 					</li>
 				</ul>
 			</div>
 		</div>
+		<spinner *ngIf="showSpinner"></spinner>
 	</div>
 </div>

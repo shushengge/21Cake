@@ -108,7 +108,7 @@
 					</a>
 				</li> -->
 				<li *ngFor="let item of proTjDataset">
-					<div class="to-del" (click)="gotoDetail($event,item['_id'])">
+					<div class="to-del" (click)="gotoDetail($event,item['_id'],item)">
 						<img [src]="srcDelLink+item['img']" alt="">
 						<h4>{{item.cnname}}</h4>
 						<p class="cake-price">￥{{item.price}}/2.0磅</p>

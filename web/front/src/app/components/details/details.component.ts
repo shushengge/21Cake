@@ -52,22 +52,33 @@ export class DetailsComponent implements OnInit {
 		}
 		return arr;
 	}
-	gotoDetail(e,id){
+	gotoDetail(e,id,item){
 		// console.log($(e.target).hasClass('recommend-cart'),id);
 		if(!$(e.target).hasClass('recommend-cart')){
 			this.router.navigate(['details/' + id]);
 		}else {
-			console.log(1111);
+			// console.log(item);
+			this.gotoCart(e,0,id,item);
 		}
 	}
-	gotoCart(e,n){
+	
+	gotoCart(e,n,id,data){
 		// console.log('tocart');
-		this.showSuspension(e,0);
 		// console.log($('li.active').text());
 		this.showSpinner = true;
+		this.pra['productid'] = id? id : this.pra['productid']; 
+		let dataset = data?  data : this.dataset;
+		// console.log('id:',this.pra['productid']);
 		this.pra['qty'] = 1;
 		this.pra['weg'] = $('li.active').text();
-		this.pra = Object.assign({},this.dataset,this.pra);
+		if(!id){
+			this.showSuspension(e,0);
+			this.pra = Object.assign({},dataset,this.pra);
+		}else {
+			this.pra = Object.assign({},this.pra,dataset);
+
+		}
+		
 		// console.log(this.pra);
 		this.http.get('userCart',{userid:this.pra['userid']}).then((res)=>{
 			// console.log(res);
