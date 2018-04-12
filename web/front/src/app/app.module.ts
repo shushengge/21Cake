@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';   //服务
 
 //element-angular
 import { ElModule } from 'element-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -26,6 +27,7 @@ import { MyComponent } from './components/my/my.component';
 import { Login1Component } from './components/login/login1/login1.component';
 import { Login2Component } from './components/login/login2/login2.component';
 import { LoadDirective } from './directives/load.directive';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 @NgModule({
@@ -46,6 +48,7 @@ import { LoadDirective } from './directives/load.directive';
     Login2Component,
     MyComponent,
     LoadDirective,
+    AlertComponent,
     MyComponent
   ],
   imports: [
@@ -53,7 +56,8 @@ import { LoadDirective } from './directives/load.directive';
     FormsModule,
     HttpModule,
     ElModule.forRoot(),
-    Router
+    Router,
+    BrowserAnimationsModule
   ],
   providers: [HttpclientService],
   bootstrap: [AppComponent]
