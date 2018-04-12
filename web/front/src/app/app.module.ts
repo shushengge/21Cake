@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';   //服务
 
 //element-angular
 import { ElModule } from 'element-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -27,6 +28,7 @@ import { Login1Component } from './components/login/login1/login1.component';
 import { Login2Component } from './components/login/login2/login2.component';
 import { LoadDirective } from './directives/load.directive';
 import { MyorderComponent } from './components/myorder/myorder.component';
+import { AlertComponent } from './components/alert/alert.component';
 
 
 @NgModule({
@@ -47,14 +49,16 @@ import { MyorderComponent } from './components/myorder/myorder.component';
     Login2Component,
     MyComponent,
     LoadDirective,
-    MyorderComponent
+    MyorderComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     ElModule.forRoot(),
-    Router
+    Router,
+    BrowserAnimationsModule
   ],
   providers: [HttpclientService],
   bootstrap: [AppComponent]

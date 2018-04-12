@@ -1,5 +1,6 @@
 <div class="list">
     <header></header>
+    <alert *ngIf="show1"></alert>
     <div class="nav">
         <ul>
             <li class="active" data-category="cake">蛋糕</li>
@@ -26,12 +27,13 @@
                     <p class="cnname">{{obj.cnname}}</p>
                     <div class="buy">
                         <p class="price">¥{{obj.price}}/个</p>
-                        <i class="fa fa-cart-plus"></i>
+                        <i class="fa fa-cart-plus" (click)="add(obj)"></i>
                     </div>
                 </div>
             </li>
         </ul>
         <i class="fa fa-spinner fa-spin upload" *ngIf="show"></i>
         <p class="hint">{{show ? "" : "没有更多数据了"}}</p>
+        <footer></footer>
     </div>
 </div>
