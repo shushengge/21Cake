@@ -19,7 +19,7 @@ export class MyorderComponent implements OnInit {
          if(window.sessionStorage.getItem('username')==undefined){
             this.router.navigate(['login'])
         }
-         this.http.get('userCart',{userid:'5acb0486cc8fa3dce16177f9'}).then((res) => {
+         this.http.get('userCart',{userid:window.sessionStorage.getItem('userid')}).then((res) => {
              console.log(res)
              if(res['status']){
                 document.querySelector('.hinder')['style']['display']='none'
