@@ -4,7 +4,7 @@ import * as $ from "jquery"
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
-  selector: 'my',
+  selector: 'my', 
   templateUrl: './my.component.html',
   styleUrls: ['./my.component.css']
 })

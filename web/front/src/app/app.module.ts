@@ -44,7 +44,6 @@ import { Login2Component } from './components/login/login2/login2.component';
     Login1Component,
     Login2Component,
     MyComponent ,
-    MyComponent
   ],
   imports: [
     BrowserModule,
