@@ -20,6 +20,9 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { Router } from "./router/router";
 
 import { HttpclientService } from "./servers/httpclient.service";
+import { CommontService } from "./servers/commont.service";
+
+
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchComponent } from './components/search/search.component';
 import { HotshopComponent } from './components/hotshop/hotshop.component';
@@ -28,7 +31,7 @@ import { Login1Component } from './components/login/login1/login1.component';
 import { Login2Component } from './components/login/login2/login2.component';
 import { LoadDirective } from './directives/load.directive';
 import { AlertComponent } from './components/alert/alert.component';
-
+import { AddressComponent } from './components/address/address.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,8 @@ import { AlertComponent } from './components/alert/alert.component';
     Login2Component,
     MyComponent ,
     LoadDirective,
-    AlertComponent
+    AlertComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +62,7 @@ import { AlertComponent } from './components/alert/alert.component';
     Router,
     BrowserAnimationsModule
   ],
-  providers: [HttpclientService],
+  providers: [HttpclientService, CommontService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -91,6 +91,7 @@ export class ListComponent implements OnInit {
         }
     }
  
+     //添加到购物车
     add(params){
         this.show1 = false;
         var objParams = JSON.parse(JSON.stringify(params).replace("_id", "productid"));
