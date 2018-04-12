@@ -44,9 +44,8 @@ import { LoadDirective } from './directives/load.directive';
     FooterComponent ,
     Login1Component,
     Login2Component,
-    MyComponent,
+    MyComponent ,
     LoadDirective,
-    MyComponent
   ],
   imports: [
     BrowserModule,
