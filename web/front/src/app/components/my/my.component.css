@@ -14,3 +14,5 @@
         #my .my-foot{height:2.773333rem;background:#414141;color:#999;font-size:0.32rem;padding-top:0.8rem;}
         #my .my-foot p{text-align: center;}
         #my .my-center .messa .username{font-weight:bold;font-size:0.42rem;}
+        .box-my {display: flex;flex-direction: column;height:100%;}
+        #my{flex:1;overflow: auto;}
