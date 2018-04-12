@@ -8,16 +8,16 @@
                 <ul>
                     <li><input type="text" placeholder="输入手机号" (change)="phone()" class="phone"/></li>
                     <li><input type="text" placeholder="用户名:6~10位字母开头" (change)="user()" class="user"/></li>
-                    <li><input type="text" placeholder="密码:6~20字符,需同时包含英文和数字" (change)="pass()" class="pass"/></li>
-                    <li><input type="text" placeholder="确认密码" (change)="pass2()" class="pass2"/></li>
+                    <li><input type="password" placeholder="密码:6~20字符,需同时包含英文和数字" (change)="pass()" class="pass"/></li>
+                    <li><input type="password" placeholder="确认密码" (change)="pass2()" class="pass2"/></li>
                     <li>
                         <input type="text" placeholder="请输入验证码" class="in-code" (change)="code()"/>
                         <img src="./assets/img-my/reg1.png" class="fr" (click)="changeCode()"/>
                         <div class="code fr"></div>
                     </li>
                     <li>
-                        <input type="text" placeholder="短息验证码" class="in-note"/>
-                        <button class="note fr">发送验证码</button>
+                        <input type="text" placeholder="短息验证码" class="in-note" (change)="innote()"/>
+                        <input class="note fr" (click)="getnote()" value="获取验证码"/>
                     </li>
                     <!-- <li><input type="date"/ value="abc"></li> -->
                     <li class="li-hint"><input type="text" class="hint"/></li>
