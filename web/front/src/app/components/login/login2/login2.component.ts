@@ -43,15 +43,17 @@ export class Login2Component implements OnInit {
         $('in-code').val('')
     }
   tologin(){
+      var phone = document.querySelector('.phone')
       if($('.phone').val()!=''&&$('.in-note').val()!=''&&$('.in-code').val()!=''){
-            window.sessionStorage.setItem('username',$('.phone').val())
+            window.sessionStorage.setItem('username',phone['value'])
             this.router.navigate(['index'])
       }else{
         $('.hint').val('登录信息有误')
       }
   }
   phone(){
-      if(!/^1[34578]\d{9}$/.test($('.phone').val())){
+      var phone = document.querySelector('.phone')
+      if(!/^1[34578]\d{9}$/.test(phone['value'])){
                 $('.hint').val('电话号码有误')
                 $('.phone').val('')
                 $('.phone').focus()
