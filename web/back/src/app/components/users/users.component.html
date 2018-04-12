@@ -14,23 +14,30 @@
         <div class="form_head">
           所有用户
         </div>
-        <!-- <div class="form_search">
-            <input type="text" name="search" placeholder="搜索" class="inp">
-            <input type="button" name="search" value="查询" class="btn">
-        </div> -->
         <div class="form_content">
-              <table>
-                <thead>
-                    <tr>
-                        <th>你好</th><th>你fasfasf好</th><th>你sfsafs好</th><th>你好sfsafsa</th><th>你好reer</th><th>你ert好</th><th>你好</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>fhishfia</td>
-                    </tr>
-                </tbody>
-            </table>
+          <table *ngIf="dataset" class="table table-striped">
+            <thead>
+              <tr>
+                <ng-template ngFor let-key [ngForOf]="columns">
+                  <th [class.item-hide]="hideColumns.indexOf(key) > -1">{{key}}</th>
+                </ng-template>
+                <th>Handle</th>
+                <!-- <th>Handle</th> -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of dataset">
+                <ng-template ngFor let-key [ngForOf]="columns">
+                  <td [class.item-hide]="hideColumns.indexOf(key) > -1">{{ dataFilter(item[key],key)}}</td>
+                </ng-template>
+                <td class="last-td">
+                  <!-- <input type="button" class="btn btn-secondary btn-sm" value="compile" /> -->
+                  <input type="button" class="btn btn-danger btn-sm delBtn" value="del" />
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
     </div>
 </div>
