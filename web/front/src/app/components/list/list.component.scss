@@ -50,9 +50,12 @@
                 width:50%;
                 height:5.92rem;
                 padding:0.533333rem;
-                img{
-                    width:4.0rem;
-                    height:4.0rem;
+                a{
+                    text-decoration:none;
+                    img{
+                        width:4.0rem;
+                        height:4.0rem;
+                    }
                 }
                 .des{
                     display:flex;
@@ -60,8 +63,16 @@
                     justify-content:space-around;
                     color:#442818;
                     font-size:26px;
+                    .enname{
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
+                    }
                     .cnname{
                         margin-bottom:0.133333rem;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
                     }
                     .buy{
                         display:flex;
@@ -75,6 +86,7 @@
                         }
                     }
                 }
+                
             }
         }
         .upload{
@@ -85,7 +97,7 @@
         }
         .hint{
             text-align:center;
-            margin-top:1.066667rem;
+            margin:1.066667rem 0 0.266667rem 0;
             font-size:24px;
             color:#684029;
         }

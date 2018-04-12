@@ -17,7 +17,7 @@ const Routes: Routes = [
     {path: 'car', component: CarComponent},
     {path: 'details/:id', component: DetailsComponent},
     {path: 'index', component: IndexComponent},
-    {path: 'list', component: ListComponent},
+    {path: 'list/:category', component: ListComponent},
     {path: 'hotshop', component: HotshopComponent},
     {path: 'search', component: SearchComponent},
 

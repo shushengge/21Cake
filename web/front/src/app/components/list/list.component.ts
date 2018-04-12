@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import * as $ from "jquery";
 import { HttpclientService } from "../../servers/httpclient.service";
 
@@ -9,7 +10,7 @@ import { HttpclientService } from "../../servers/httpclient.service";
 })
 export class ListComponent implements OnInit {
 
-    constructor(private http:HttpclientService) { }
+    constructor(private http:HttpclientService, private route: ActivatedRoute) { }
 
     dataset: Array<any> = [];
     baseurl: string = this.http.baseurl+"temp/";
@@ -18,7 +19,6 @@ export class ListComponent implements OnInit {
     tag: boolean = true;
 
     ngOnInit(){
-
         var pWidth = $(".nav").width(); //屏幕宽度
 
         $(".nav ul").on("click", "li", (e)=>{
@@ -42,31 +42,51 @@ export class ListComponent implements OnInit {
             this.http.get("category", {category:$(e.target).data("category"), page:this.page, limit:8}).then((res)=>{
                 this.dataset = res['data'];
             });
-            //如果没有数据了，则不添加滚动事件
-            if(this.show){
-                $(".content").scroll(()=>{
-                    //判断是否到达底部
-                    if($(".content .upload").position().top+$(".content .upload").height()<=$(".content").height()){
-                        console.log($(".content .upload").position().top+$(".content .upload").height(), $(".content").height());
-                        //加标志，不让scroll多次触发
-                        if(this.tag){
-                            this.tag = false;
-                            this.http.get("category", {category:$(e.target).data("category"), page:++this.page, limit:8}).then((res)=>{
-                                for(var i=0; i<res['data'].length; i++){
-                                    this.dataset.push(res['data'][i]);
-                                }
-                                this.tag = true;
-                                //如果最后返回的数据没有8条，就移除scroll事件
-                                if(res['data'].length<8){
-                                    this.show = 0;
-                                    $(".content").unbind("scroll");
-                                }
-                            });
-                        }
-                    }
-                });
-            }
+            
+            this.lazy($(e.target).data("category"));
+
+            //改变标签信息
+            $(".content .cate").text($(e.target).text());
         });
+        
+        //默认显示蛋糕分类，其他的不存在的也显示蛋糕分类
+        this.http.get("category", {category:"cake", page:this.page, limit:8}).then((res)=>{
+                this.dataset = res['data'];
+        });
+        this.lazy("cake")
+
+        //接收首页传参过来的参数
+        var params = this.route.snapshot.paramMap.get('category');
+        $("[data-category="+params+"]").trigger("click");
+    }
+
+
+    //懒加载
+    lazy(params){
+        //如果没有数据了，则不添加滚动事件
+        if(this.show){
+            $(".content").scroll(()=>{
+                //判断是否到达底部
+                if($(".content .upload").position().top+$(".content .upload").height()<=$(".content").height()){
+                    console.log($(".content .upload").position().top+$(".content .upload").height(), $(".content").height());
+                    //加标志，不让scroll多次触发
+                    if(this.tag){
+                        this.tag = false;
+                        this.http.get("category", {category:params, page:++this.page, limit:8}).then((res)=>{
+                            for(var i=0; i<res['data'].length; i++){
+                                this.dataset.push(res['data'][i]);
+                            }
+                            this.tag = true;
+                            //如果最后返回的数据没有8条，就移除scroll事件
+                            if(res['data'].length<8){
+                                this.show = 0;
+                                $(".content").unbind("scroll");
+                            }
+                        });
+                    }
+                }
+            });
+        }
     }
  
 }
