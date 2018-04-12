@@ -111,4 +111,5 @@
 .home .home_body .home_content{
     flex:1;
     padding: 25px 20px;
+    overflow-x: auto;
 }

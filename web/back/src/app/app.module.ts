@@ -2,14 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {HttpclientService} from './services/httpclient.service'
-
-
-// element ui 模块
-// import { ElModule } from 'element-angular'
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-// import { BrowserModule } from '@angular/platform-browser'
-
+import {HttpclientService} from './services/httpclient.service';
+import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
 import { AppComponent } from './app.component';
 import { AdminComponent } from './components/admin/admin.component';
@@ -23,6 +17,7 @@ import { HomeComponent } from './components/home/home.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { IndentComponent } from './components/indent/indent.component'
 
+// import { BootstrapComponent } from '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
 @NgModule({
   declarations: [
@@ -41,6 +36,7 @@ import { IndentComponent } from './components/indent/indent.component'
     AppRouter,
     FormsModule,
     HttpModule,
+    // BootstrapComponent
   ],
   providers: [
     HttpclientService

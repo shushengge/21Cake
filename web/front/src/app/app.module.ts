@@ -25,6 +25,7 @@ import { HotshopComponent } from './components/hotshop/hotshop.component';
 import { MyComponent } from './components/my/my.component';
 import { Login1Component } from './components/login/login1/login1.component';
 import { Login2Component } from './components/login/login2/login2.component';
+import { LoadDirective } from './directives/load.directive';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { Login2Component } from './components/login/login2/login2.component';
     FooterComponent ,
     Login1Component,
     Login2Component,
-    MyComponent ,
+    MyComponent,
+    LoadDirective,
     MyComponent
   ],
   imports: [

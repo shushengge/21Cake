@@ -16,6 +16,7 @@
             left:0;
             li{
                 line-height:1.3rem;
+                font-size:24px;
             }
             .active{
                 border-bottom:0.053333rem solid #684029;
@@ -39,6 +40,7 @@
             }
             .dosing{
                 color:#DFC4A7;
+                font-size:24px;
             }
         }
         ul{
@@ -48,9 +50,12 @@
                 width:50%;
                 height:5.92rem;
                 padding:0.533333rem;
-                img{
-                    width:4.0rem;
-                    height:4.0rem;
+                a{
+                    text-decoration:none;
+                    img{
+                        width:4.0rem;
+                        height:4.0rem;
+                    }
                 }
                 .des{
                     display:flex;
@@ -58,8 +63,16 @@
                     justify-content:space-around;
                     color:#442818;
                     font-size:26px;
+                    .enname{
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
+                    }
                     .cnname{
                         margin-bottom:0.133333rem;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
                     }
                     .buy{
                         display:flex;
@@ -73,13 +86,32 @@
                         }
                     }
                 }
+                
             }
         }
         .upload{
             font-size:30px;
-            margin-top:0.533333rem;
+            margin-top:0.666667rem;
             display:flex;
             justify-content:center;            
         }
+        .hint{
+            text-align:center;
+            margin:1.066667rem 0 0.266667rem 0;
+            font-size:24px;
+            color:#684029;
+        }
     }
+}
+
+
+@media screen and (min-width:992px){
+    .list .nav ul li{ font-size:50px; }
+    .list .content .tag .cate{ font-size:50px; }
+    .list .content .tag .dosing{ font-size:50px; }
+    .list .content ul li .des{ font-size:50px; }
+    .list .content ul li .des .buy i{ font-size:60px; }
+    .list .content .upload{ font-size:60px; }
+    .list .content .hint{ font-size:50px; }
+
 }

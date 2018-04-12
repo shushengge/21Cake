@@ -86,7 +86,8 @@ export class RegisterComponent implements OnInit {
     }
 
     phone(){
-        if(!/^1[34578]\d{9}$/.test($('.phone').val())){
+         var phone = document.querySelector('.phone')
+        if(!/^1[34578]\d{9}$/.test(phone['value'])){
                 $('.hint').val('电话号码有误')
                 $('.phone').val('')
                 $('.phone').focus()
@@ -95,7 +96,8 @@ export class RegisterComponent implements OnInit {
         }
     }
     user(){
-        if(!/^[a-z][a-z0-9\-]{5,19}$/.test($('.user').val())){
+        var user = document.querySelector('.user')
+        if(!/^[a-z][a-z0-9\-]{5,19}$/.test(user['value'])){
                 $('.hint').val('用户名有误')
                 $('.user').val('')
                 $('.user').focus()
@@ -104,7 +106,8 @@ export class RegisterComponent implements OnInit {
         }
     }
     pass(){
-        if(!/^[^\s]{6,20}$/.test($('.pass').val())){
+        var pass = document.querySelector('.pass')
+        if(!/^[^\s]{6,20}$/.test(pass['value'])){
                 $('.hint').val('密码格式有误')
                 $('.pass').val('')
                 $('.pass').focus()
@@ -133,7 +136,10 @@ export class RegisterComponent implements OnInit {
     toreg(){
         if($('.phone').val()!=''&&$('.user').val()!=''&&$('.pass').val()!=''&&$('.pass2').val()!=''&&$('.in-code').val()!=''&&$('.in-note').val()!=''){
             this.http.get('register',{ username:$('.user').val(), password:$('.pass').val()}).then((res) => {
+<<<<<<< HEAD
                     console.log(res)
+=======
+>>>>>>> 58fec8d77ba2c29984959087ef6ca11b5cd61ab3
                  if(res['status']){
                    this.router.navigate(['login'])
                    }else{

@@ -19,11 +19,12 @@ export class Login1Component implements OnInit {
     $('.hint').val('')
   }
     tologin(){
+        var username = document.querySelector('.username')
         this.http.get('login',{ username:$('.username').val(), password:$('.password').val() }).then((res) => {
-             if(res.status){
-                window.sessionStorage.setItem('xxtoken',res.data)
-                window.sessionStorage.setItem('userid',res.data1[0]._id)
-                window.sessionStorage.setItem('username',$('.username').val())
+             if(res['status']){
+                window.sessionStorage.setItem('xxtoken',res['data'])
+                window.sessionStorage.setItem('userid',res['data1'][0]._id)
+                window.sessionStorage.setItem('username',username['value'])
                 
                this.router.navigate(['index'])
                }else{
