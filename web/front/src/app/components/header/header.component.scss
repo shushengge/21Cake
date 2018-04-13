@@ -42,7 +42,7 @@
         display:flex;
         justify-content:space-around;
         background:#fff;
-        box-shadow:0px 7px 10px 0px rgba(145, 145, 145, 0.50);
+        box-shadow:0 0.093333rem 0.133333rem 0 rgba(145, 145, 145, 0.50);
         a{
             display:flex;
             flex-direction:column;
@@ -64,6 +64,6 @@
     .header{ font-size:70px; }
     .header .left .location{ font-size:50px; }
     .header .left .location i{ font-size:60px; }
-    .header .links div{ font-size:50px; }
-    .header .links div i{ font-size:60px; }
+    .header .links a{ font-size:50px; }
+    .header .links a i{ font-size:60px; }
 }
