@@ -1,9 +1,9 @@
 <div class="lx-car-box">
 	<header></header>
 	<!-- <div class="lx-car"> -->
-	<div class="lx-car" *ngIf="carDataset">
+	<div class="lx-car" *ngIf="showCar">
 		<p class="car-top-tip">· 满一百元免配送服务费 ·</p>
-		<ul class="car-list">
+		<ul class="car-list" *ngIf="carDataset">
 			<li *ngFor="let item of carDataset;let idx= index">
 				<div class="clearfix">
 					<a href="javascript:void(0)" class="fl">
@@ -17,8 +17,8 @@
 				</div>
 				<div class="clearfix car-pro-num">
 					<span>
-						<img *ngIf="!showDel[idx]" src="http://static.21cake.com//themes/wap/img/-.png" class="img1" (click)="changeQty($event,idx,0)">
-						<img *ngIf="showDel[idx]" src="http://static.21cake.com/themes/wap/img/cart-order-delete.png" class="img-del" (click)="delPro($event,item['productid'],idx)">
+						<img *ngIf="!showDel[idx]" src="../../../assets/static/-.png" class="img1" (click)="changeQty($event,idx,0)">
+						<img *ngIf="showDel[idx]" src="../../../assets/static/delete.png" class="img-del" (click)="delPro($event,item['productid'],idx)">
 					</span>
 
 					<!-- <span class="val">{{item['qty']}}</span> -->
@@ -26,13 +26,16 @@
 					<input class="val" type="text" [value]="item['qty']" [(ngModel)]= "item['qty']" #iptVal>
 					
 					<span>
-						<img src="http://static.21cake.com//themes/wap/img/+.png" alt="+" class="img2" (click)="changeQty($event,idx,1)">
+						<img src="../../../assets/static/+.png" alt="+" class="img2" (click)="changeQty($event,idx,1)">
 					</span>
 				</div>
 				<p class="laid-count">每份含免费餐具10份</p>
 				<a href="javascript:void(0)" class="birthday-brand">+ 添加生日牌</a>
 			</li>
 		</ul>
+		<div class="car-kong" *ngIf="!carDataset">
+			您的购物车为空，赶紧去购物吧！
+		</div>
 		<div class="car-dp">
 			<p class="dp-top">· 搭配商品 ·</p>
 			<ul class="clearfix">
