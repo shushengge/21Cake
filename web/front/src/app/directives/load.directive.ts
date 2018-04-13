@@ -6,10 +6,9 @@ import * as $ from "jquery";
 })
 export class LoadDirective {
 
-    constructor(el: ElementRef) { 
-        var img = el.nativeElement;
+    constructor(el: ElementRef) {
         img.onload = function(){
-            img.setAttribute("src", img.dataset.src)
+            this.setAttribute("src", img.dataset.src);
         }
     }
 }
