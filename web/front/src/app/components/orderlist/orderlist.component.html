@@ -5,10 +5,30 @@
     </div>
     <div class="orderlist_container">
         <div class="orderlist_address">
-            <div class="new-add-address address-action">
-                <span></span>
-                新增收货地址
+            
+            <div class="orderlist_address_change clearfix" *ngIf="xx.length>0">
+                <div class="current_address">
+                    <div class="current_address_txt">
+                        <span class="current_address_info">
+                            <span class="address_name">{{xx[0].name}}</span>
+                            <span class="address_mobile">{{xx[1].phone}}</span>
+                        </span>
+                        <span class="address_address">
+                            {{xx[2].address[0].province}}{{xx[2].address[1].city}}{{xx[2].address[2].town}}{{xx[3].street}}({{xx[4].men}})
+                        </span>
+                    </div>
+                </div>
+                <a routerLink="/address" class="changeAddress">
+                    更换
+                </a>
             </div>
+
+            <a routerLink="/address" *ngIf="xx.length==0">
+                <div class="new-add-address address-action" >
+                    <span></span>
+                    新增收货地址
+                </div>
+            </a>
         </div>
         <div class="orderlist_pro">
             <div class="cover">
@@ -109,7 +129,7 @@
         </div>
     </div>
     <div class="orderlist_pay clearfix">
-        <button class="orderlist_btn fr">下单</button>
+        <button class="orderlist_btn fr" (click)="sure()">下单</button>
         <span class="fr">
             共￥
             <span class="orderlist_total">{{totalprice}}.00</span>

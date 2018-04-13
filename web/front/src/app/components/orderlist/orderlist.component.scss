@@ -43,6 +43,54 @@
             font-size: 0.4rem;
             line-height: 1.813333rem;
             display: block;
+            .current_address{
+                float: left;
+                margin-top: 0.4rem;
+                padding-left: 1.2rem;
+                width: 76%;
+                height: 1.813333rem;
+                box-sizing: border-box;
+                text-align: left;
+                .current_address_txt{
+                    font-size: 0.32rem;
+                    color: #442818;
+                    .current_address_info{
+                        line-height: 0.533333rem;
+                        font-size: 0.346667rem;
+
+                        font-weight: normal;
+                        display: block;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        .address_name{
+                            margin-right: 0.533333rem;
+                        }
+                        .address_mobile{
+                            font-size:0.4rem;
+                        }
+                    }
+                    .address_address{
+                        font-size: 0.346667rem;
+                        color: #80695B;
+                        display: block;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        line-height: 0.533333rem;
+                    }
+                    
+                }
+                .changeAddress{
+                    float: right;
+                    line-height: 1.813333rem;
+                    font-size: 0.373333rem;
+                    margin-right: 0.373333rem;
+                }
+            }
+
+            a{
+                color:#442818;
+            }
             .new-add-address{
                 span{
                     font-size: 0.8rem;
@@ -62,7 +110,6 @@
         .orderlist_pro{
             width: 100%;
             overflow: auto;
-            
             ul{
                 height: 3.76rem;
                 overflow:hidden;
