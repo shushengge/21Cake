@@ -7,14 +7,15 @@
                 <span class="form-subtitle">Please login.</span>
             </div>
             <div class="form-group">
-                <input class="form-control " type="text" autocomplete="off" placeholder="Username" name="username">
+                <input class="form-control username" type="text" autocomplete="off" placeholder="Username" name="username">
             </div>
             <div class="form-group">
-                <input class="form-control " type="password" autocomplete="off" placeholder="Password" name="password">
+                <input class="form-control password" type="password" autocomplete="off" placeholder="Password" name="password">
             </div>
             <div>
-                <button type="submit" class="btn-primary " [class.actived]="background">LOGIN</button>
+                <button type="submit" class="btn-primary " [class.actived]="background" (click)="login($event)">LOGIN</button>
             </div>
         </div>
     </div>
 </div>
+<!-- <app-spinner></app-spinner> -->

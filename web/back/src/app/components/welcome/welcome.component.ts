@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http'
+import {HttpclientService} from '../../services/httpclient.service'
 
 @Component({
   selector: 'app-welcome',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpclientService) { }
 
   ngOnInit() {
+      this.http.get('backproducts').then((res)=>{
+        if(res['error'] && !res['status']){
+          location.href="login";
+        }
+      })
   }
 
 }
