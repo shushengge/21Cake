@@ -11,6 +11,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 export class MyComponent implements OnInit {
 
   constructor(private router: Router) { }
+  show1: boolean = false;
 
   ngOnInit() {
         if(window.sessionStorage.getItem('username')==undefined){
@@ -19,14 +20,13 @@ export class MyComponent implements OnInit {
         $('.username').text(window.sessionStorage.getItem('username'))
   }
   quit(){
-        var con;
-        con=confirm("确定要退出登录吗?");
-        if(con==true){
+          sessionStorage.removeItem("username");
+          sessionStorage.removeItem('xxtoken')
+          sessionStorage.removeItem('userid')
+          this.show1=true
+          setTimeout(()=>{
             this.router.navigate(['index'])
-            sessionStorage.removeItem("username");
-            sessionStorage.removeItem('xxtoken')
-            sessionStorage.removeItem('userid')
-        }
+          },1500)
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
  import { HttpclientService } from "../../servers/httpclient.service"
 import { Router,ActivatedRoute,ParamMap } from '@angular/router'
 import { CommontService } from "../../servers/commont.service";
@@ -11,13 +11,17 @@ import * as $ from "jquery";
   styleUrls: ['./orderlist.component.scss'],
 })
 export class OrderlistComponent implements OnInit {
+    @Input() params : string = "";
+
+    show: boolean = false;
+    show1: boolean = false;
+
     qty:Number;
     totalprice:Number;
     dataset:Array<any>;
     link:string=this.http.baseurl+"temp/";
-    constructor(private http:HttpclientService, private address : CommontService) { }
+    constructor(private http:HttpclientService, private address : CommontService,private router :Router) { }
     xx:Array<any> = [];
-    show :boolean = false;
     ngOnInit() {
         this.xx = this.address.address;
         this.http.get("userCart",{userid:window.sessionStorage.getItem('userid')}).then((res)=>{
@@ -48,11 +52,20 @@ export class OrderlistComponent implements OnInit {
     }
 
     sure(){
-        this.http.get("payUpdate",{userid:window.sessionStorage.getItem('userid'),status:0}).then((res)=>{
-            if(res['data'].ok == 1){
-              alert('美味即将奉上')
-            }
-        })
+        this.show = false;
+        if(this.xx.length>0){
+            this.http.get("payUpdate",{userid:window.sessionStorage.getItem('userid'),status:0}).then((res)=>{
+                if(res['data'].ok == 1){
+                    this.show = true;
+                    setTimeout((e)=>{
+                        // location.href="/index";
+                        this.router.navigate(['/index'])
+                    },1500)
+                }
+            })
+        }else{
+           this.show1 = true;
+        }
     }
 
     back(){
