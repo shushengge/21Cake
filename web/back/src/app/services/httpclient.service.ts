@@ -8,7 +8,7 @@ import {ModalService} from './modal.service';
 export class HttpclientService{
     constructor(private http: Http, private router: Router,private spinner:ModalService){}
 
-    private baseUrl: string = 'http://10.3.136.37:8080/';
+    private baseUrl: string = 'http://localhost:8080/';
     private getUrl(_url){
         if(_url.startsWith('http')){
             return _url;
