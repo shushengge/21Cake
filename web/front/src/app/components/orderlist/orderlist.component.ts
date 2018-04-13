@@ -11,13 +11,13 @@ import * as $ from "jquery";
   styleUrls: ['./orderlist.component.scss'],
 })
 export class OrderlistComponent implements OnInit {
+    show: boolean = false;
     qty:Number;
     totalprice:Number;
     dataset:Array<any>;
     link:string=this.http.baseurl+"temp/";
     constructor(private http:HttpclientService, private address : CommontService,private router :Router) { }
     xx:Array<any> = [];
-    show :boolean = false;
     ngOnInit() {
         this.xx = this.address.address;
         this.http.get("userCart",{userid:window.sessionStorage.getItem('userid')}).then((res)=>{
@@ -48,12 +48,15 @@ export class OrderlistComponent implements OnInit {
     }
 
     sure(){
+        this.show = false;
+
         this.http.get("payUpdate",{userid:window.sessionStorage.getItem('userid'),status:0}).then((res)=>{
             if(res['data'].ok == 1){
-              alert('美味即将奉上')
-              setInterval(function(){
-                    location.href="/index";
-              },2000)
+                this.show = true;
+                setTimeout((e)=>{
+                    // location.href="/index";
+                    this.router.navigate(['/index'])
+                },1500)
             }
         })
     }
