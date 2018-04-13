@@ -10,24 +10,52 @@ module.exports = {
                 res.send({status:true, data:result});
             }) 
         })
-        // 根据用户名获取该用户的订单，含有付款和未付款的订单
-        // app.get("")
+
+        // 更新某个用户的商品列表信息   products字段20180413
+        app.get("/proUpdate", filter, (req, res)=>{
+            let userid = req.query.userid;
+            let status = req.query.status;
+            let products = req.query.products;
+            db.mongodb.productsUpdate("order", {"userid": userid, "status": status}, products).then((result)=>{
+                res.send({status:true, data:result});
+            })
+        })
 
         //根据用户id,状态对订单进行查询
         app.get("/userOrder", filter, (req, res) => {
-            console.log(req.query);
+            // console.log(req.query);
             let userid = req.query.userid;
             let status = req.query.status;
             db.mongodb.select("order", {userid, status}).then((result) => {
-                res.send({status:true, data:result});
+                // res.send({status:true, data:result});
+                if(result['length']>0){
+                    res.send({status:true, data:result});
+                }else{
+                    res.send({status:false})
+                }
             }) 
         })
+
+        // 模拟结算----传status=0过来  将对应的order的status=1    20180413
+        app.get("/payUpdate", filter, (req,res)=>{
+            let userid = req.query.userid;
+            let status = req.query.status;
+            db.mongodb.payUpdate("order", {"userid": userid, "status": status}).then((result)=>{
+                res.send({data:result});
+            })
+        })
+
 
         //根据用户id对订单进行查询
         app.get("/useridOrder", filter, (req, res) => {
             let userid = req.query.userid;
             db.mongodb.select("order", {userid}).then((result) => {
-                res.send({status:true, data:result});
+                // res.send({status:true, data:result});
+                if(result['length']>0){
+                    res.send({status:true, data:result});
+                }else{
+                    res.send({status:false})
+                }
             }) 
         })
         

@@ -44,10 +44,27 @@ module.exports = {
         })
     },
 
-    // 修改特定字段的值    _condition: {_userid, _productid}
+    // 修改特定字段的值qty    _condition: {_userid, _productid}
     qtyUpdate:(_collection, _condition, _qty) =>{
         return new Promise((resolve, reject) => {
             db.db("projectAngular").collection(_collection).update(_condition, {"$set":{"qty": _qty}}).then((result, error)=>{
+                resolve(result);
+            })
+        })
+    },
+    
+    // 修改特定字段的值products
+    productsUpdate:(_collection, _condition, _products) =>{
+        return new Promise((resolve, reject) =>{
+            db.db("projectAngular").collection(_collection).update(_condition, {"$set":{"products": _products}}).then((result, error)=>{
+                resolve(result);
+            })
+        })
+    },
+    // 结算接口，直接将order表里面status为0的数据更新为status为1，表示结算成功，业务结束
+    payUpdate: (_collection, _condition) =>{
+        return new Promise((resolve, reject)=>{
+            db.db("projectAngular").collection(_collection).update(_condition, {"$set":{"status":"1"}}).then((result, error)=>{
                 resolve(result);
             })
         })
