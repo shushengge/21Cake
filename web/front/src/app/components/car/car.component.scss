@@ -85,19 +85,28 @@
 			    .laid-count {
 			    	height:1.226667rem;
 			    	line-height:1.226667rem;
-			    	padding-left:110px;
-			    	background: url(http://static.21cake.com/themes/wap/img/cart-laid.png) no-repeat ;
+			    	padding-left:1.466667rem;
+			    	background: url(../../../assets/static/cart-laid.png) no-repeat 0.266667rem center;
+				    background-size: 1.2rem 0.933333rem;
 			    }
 			    .birthday-brand {
 			    	display:block;
 			    	height: 0.8rem;
 			    	line-height:0.8rem;
-			    	padding-left:160px;
+			    	padding-left:2.133333rem;
 			    	color: #707070;
-			    	background: url(http://static.21cake.com/themes/wap/img/cart-birthday.jpg) no-repeat,url(http://static.21cake.com/themes/wap/img/go-right.png) no-repeat right;
-			    	background-size: 136px 60px,16px 28px;
+			    	background: url(../../../assets/static/card.png) no-repeat,url(../../../assets/static/go-right.png) no-repeat right;
+			    	background-size: 1.813333rem 0.8rem,0.213333rem 0.373333rem;
 			    }
 			}
+		}
+		.car-kong {
+			height: 3.2rem;
+		    width: 100%;
+		    text-align: center;
+		    background: #fff;
+		    line-height: 3.2rem;
+		    font-size: 34px;
 		}
 		.car-dp {
 			.dp-top {
@@ -120,8 +129,8 @@
 			    img {
 			    	display:block;
 					width:100%;
-				    max-width: 3.4375rem;
-				    max-height: 3.78125rem;
+				    width: 3.4375rem;
+				    height: 3.78125rem;
 				    margin: 0 auto;
 			    }
 			    h4 {
@@ -135,7 +144,7 @@
 				    text-overflow: ellipsis;
 			    }
 			    span.recommend-cart {
-			    	background: url(http://static.21cake.com/themes/wap/img/candle-cart.png) no-repeat center;
+			    	background: url(../../../assets/img/buycar2.png) no-repeat center;
 					display:block;
 					width:0.8rem;
 					height:0.8rem;
@@ -161,7 +170,8 @@
 				cursor:pointer;
 				height:1.173333rem;
 				width:1.173333rem;
-				background: url(http://static.21cake.com/themes/wap/img/cart-order-delete.png) no-repeat center;
+				background: url(../../../assets/static/delete.png) no-repeat center;
+				background-size:0.666667rem 0.533333rem;
 			}
 			li {
 				height:1.173333rem;

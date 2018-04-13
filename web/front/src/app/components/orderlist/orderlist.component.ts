@@ -1,42 +1,39 @@
 import { Component, OnInit } from '@angular/core';
  import { HttpclientService } from "../../servers/httpclient.service"
 import { Router,ActivatedRoute,ParamMap } from '@angular/router'
+import { CommontService } from "../../servers/commont.service";
 import * as $ from "jquery";
 
 
 @Component({
   selector: 'orderlist',
   templateUrl: './orderlist.component.html',
-  styleUrls: ['./orderlist.component.scss']
+  styleUrls: ['./orderlist.component.scss'],
 })
 export class OrderlistComponent implements OnInit {
     qty:Number;
     totalprice:Number;
     dataset:Array<any>;
     link:string=this.http.baseurl+"temp/";
-    constructor(private http:HttpclientService) { }
-
+    constructor(private http:HttpclientService, private address : CommontService) { }
+    xx:Array<any> = [];
+    show :boolean = false;
     ngOnInit() {
-        this.http.get('userCart?userid=5acb0486cc8fa3dce16177f9').then((res)=>{
-            console.log(res)
+        this.xx = this.address.address;
+        this.http.get("userCart",{userid:window.sessionStorage.getItem('userid')}).then((res)=>{
+
+        // this.http.get('userCart?userid=5acb0486cc8fa3dce16177f9').then((res)=>{
             if(res['status']){
-                
                 this.dataset = res["data"];
-                var qty = this.dataset['length'] > 0 ? this.dataset['length'] : 1;
-                console.log(this.qty)
+                var qty = this.dataset.length;
                 var total = 0;
-                
                 this.dataset.forEach((item)=>{
-                    console.log(item)
                     total += item.qty*item.price;
-                    
                 })
                 this.totalprice = total;
-                // $('.orderlist_pro .orderlist_prolist').width(190*this.dataset.length);
+                $('.orderlist_pro .orderlist_prolist').width(210*this.dataset.length);
             }
         })
-
-
     }
 
     check(e){
@@ -48,6 +45,14 @@ export class OrderlistComponent implements OnInit {
                 ck[i].className='';
             }
         }
-
     }
+
+    sure(){
+        this.http.get("payUpdate",{userid:window.sessionStorage.getItem('userid'),status:0}).then((res)=>{
+            if(res['data'].ok == 1){
+              alert('美味即将奉上')
+            }
+        })
+    }
+
 }

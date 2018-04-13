@@ -112,7 +112,7 @@
 	width: 0.46875rem;
 	margin:0.46875rem auto;
 
-	background: url(http://static.21cake.com/themes/wap/img/Page-go.png) no-repeat;
+	background: url(../../../assets/static/Page-go.png) no-repeat;
 }
 
 .detail-pro-box .select-card .detail-options-card{
@@ -131,17 +131,19 @@
 	margin-bottom:0.125rem;
 }
 .detail-pro-box .select-card .detail-options-card .ls li:nth-child(1){
-	background: url(http://static.21cake.com/themes/wap/img/size.png) no-repeat;
+	/*background: url(../../../assets/static/size.png) no-repeat;*/
+	background: url(../../../assets/static/size.png) no-repeat;
+
 }
 .detail-pro-box .select-card .detail-options-card .ls li:nth-child(2){
-	background: url(http://static.21cake.com/themes/wap/img/laid.png) no-repeat 0.15625rem 0;
+	background: url(../../../assets/static/laid.png) no-repeat 0.15625rem 0;
 
 }
 .detail-pro-box .select-card .detail-options-card .ls li:nth-child(3){
-	background: url(http://static.21cake.com/themes/wap/img/unmber.png) no-repeat;
+	background: url(../../../assets/static/unmber.png) no-repeat;
 }
 .detail-pro-box .select-card .detail-options-card .ls li:nth-child(4){
-	background: url(http://static.21cake.com/themes/wap/img/time.png) no-repeat;
+	background: url(../../../assets/static/time.png) no-repeat;
 }
 
 .detail-pro-box .select-card .detail-options-card .store-info span{
@@ -154,13 +156,13 @@
 .detail-pro-box .select-card .detail-options-card .store-info .sp1{
 	width:37.5%;
 	padding-left:0.875rem;
-	background: url(http://static.21cake.com//themes/wap/img/fresh.png) no-repeat 0 center;
+	background: url(../../../assets/static/fresh.png) no-repeat 0 center;
 }
 .detail-pro-box .select-card .detail-options-card .store-info .sp2{
 	width:62.5%;
 }
 .detail-pro-box .select-card .detail-options-card .store-info .li2 .sp1{
-	background: url(http://m.21cake.com/themes/wap/img/sweet.png) no-repeat 0 center;
+	background: url(../../../assets/static/sweet.png) no-repeat 0 center;
 }
 .detail-pro-box .select-card .detail-options-card .store-info .li2 .sweet-list i{
 	display:block;
@@ -168,10 +170,10 @@
 	height:0.4375rem;
 	width:0.4375rem;
 	margin-right:0.3125rem;
-	background: url(http://static.21cake.com/themes/wap/img/sweet-01.png) no-repeat 0 center;
+	background: url(../../../assets/static/sweet-01.png) no-repeat 0 center;
 }
 .detail-pro-box .select-card .detail-options-card .store-info .li2 .sweet-list i.active{
-	background: url(http://static.21cake.com/themes/wap/img/sweet-02.png) no-repeat 0 center;
+	background: url(../../../assets/static/sweet-02.png) no-repeat 0 center;
 }
 
 .wenzi{
@@ -233,7 +235,7 @@
     text-overflow: ellipsis;
 }
 .recommend-list li span.recommend-cart{
-	background: url(http://static.21cake.com/themes/wap/img/candle-cart.png) no-repeat center;
+	background: url(../../../assets/static/candle-cart.png) no-repeat center;
 	display:block;
 	width:0.8rem;
 	height:0.8rem;
@@ -379,16 +381,16 @@
 
 }
 .lx-detail .detail-suspension .detail-suspension-content .suspension-options ul li:nth-child(1){
-	background: url(http://static.21cake.com/themes/wap/img/size.png) no-repeat 0.4rem center;
+	background: url(../../../assets/static/size.png) no-repeat 0.4rem center;
 }
 .lx-detail .detail-suspension .detail-suspension-content .suspension-options ul li:nth-child(2){
-	background: url(http://static.21cake.com/themes/wap/img/laid.png) no-repeat 0.506667rem center;
+	background: url(../../../assets/static/laid.png) no-repeat 0.506667rem center;
 }
 .lx-detail .detail-suspension .detail-suspension-content .suspension-options ul li:nth-child(3){
-	background: url(http://static.21cake.com/themes/wap/img/unmber.png) no-repeat 0.4rem center;
+	background: url(../../../assets/static/unmber.png) no-repeat 0.4rem center;
 }
 .lx-detail .detail-suspension .detail-suspension-content .suspension-options ul li:nth-child(4){
-	background: url(http://static.21cake.com/themes/wap/img/time.png) no-repeat 0.4rem center;
+	background: url(../../../assets/static/time.png) no-repeat 0.4rem center;
 }
 
 .lx-detail .detail-suspension .detail-suspension-content .pro-normal{
@@ -410,7 +412,7 @@
 }
 .lx-detail .detail-suspension .detail-suspension-content .pro-normal ul li.active{
     border: 0.026667rem solid #000;
-    background: url(http://static.21cake.com/themes/wap/img/icon_selected.png) no-repeat left top;
+    background: url(../../../assets/static/icon_selected.png) no-repeat left top;
 }
 
 .lx-detail .detail-suspension .detail-suspension-content .markup-list .list-msg{

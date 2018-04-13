@@ -22,7 +22,11 @@ export class MyorderComponent implements OnInit {
          this.http.get('userOrder',{userid:window.sessionStorage.getItem('userid'),status:0}).then((res) => {
              if(res['status']){
                 document.querySelector('.hinder')['style']['display']='none'
-                this.dataset = res["data"]
+                var arr = []
+                res["data"][0]['products'].forEach(function(b){
+                    arr.push(JSON.parse(b))
+                })
+                this.dataset=arr
                 this.num = this.dataset.length
                 document.querySelector('.list-ul')['style']['width']=this.dataset.length*2.666667+'rem'
                 var num1 = 0

@@ -13,7 +13,7 @@ export class DetailsComponent implements OnInit {
 	dataset: Array<any>;
 	text:string = '已选择：2.0英镑';
 	showSpinner: boolean = false;
-	pra: object = {userid:'5acb0486cc8fa3dce16177f9',username: 'user1'}
+	pra: object = {};
 	srcLink: string = this.http.baseurl + 'temp/';
 	srcDelLink: string = this.http.baseurl + 'temp/';
 	proTjDataset: Array<any>;
@@ -82,30 +82,46 @@ export class DetailsComponent implements OnInit {
 		// console.log(this.pra);
 		this.http.get('userCart',{userid:this.pra['userid']}).then((res)=>{
 			// console.log(res);
-			for(var i=0;i<res['data'].length;i++){
-				if(res['data'][i]['productid'] == this.pra['productid']){
-					console.log('same');
-					// 购物车已存在该商品则只增加数量
-					this.pra['qty'] += res['data'][i]['qty'];
-					// 更新购物车信息
-					this.http.get('updateCartQty',this.pra).then((res)=>{
+			if(res['status']){
+
+				for(var i=0;i<res['data'].length;i++){
+					if(res['data'][i]['productid'] == this.pra['productid']){
+						console.log('same');
+						// 购物车已存在该商品则只增加数量
+						this.pra['qty'] += res['data'][i]['qty'];
+						// 更新购物车信息
+						this.http.get('updateCartQty',this.pra).then((res)=>{
+							// console.log(res);
+							if(res['status']){
+								this.showSpinner = false;
+
+								if(n===1){
+									this.router.navigate(['car']);
+								}else {
+									alert('成功加入购物车！');
+								}
+
+							}
+						})
+						break;
+					}
+				}
+				if(i==res['data'].length){
+					// 插入购物车
+					this.http.get('addCart',this.pra).then((res)=>{
 						// console.log(res);
 						if(res['status']){
 							this.showSpinner = false;
-
+							
 							if(n===1){
 								this.router.navigate(['car']);
 							}else {
 								alert('成功加入购物车！');
 							}
-
 						}
 					})
-					break;
 				}
-			}
-			if(i==res['data'].length){
-				// 插入购物车
+			}else {
 				this.http.get('addCart',this.pra).then((res)=>{
 					// console.log(res);
 					if(res['status']){
@@ -119,6 +135,7 @@ export class DetailsComponent implements OnInit {
 					}
 				})
 			}
+
 
 		})
 		// this.http.get('addCart',this.pra).then((res)=>{
@@ -138,6 +155,10 @@ export class DetailsComponent implements OnInit {
 	
 
 	ngOnInit() {
+		console.log( window.sessionStorage.getItem('userid'));
+		this.pra['userid'] = window.sessionStorage.getItem('userid');
+		this.pra['username'] = window.sessionStorage.getItem('username');
+
 		this.route.params.subscribe((params) => {
             // console.log(params);
             if(params['id']){
@@ -158,7 +179,7 @@ export class DetailsComponent implements OnInit {
 
             }
             else {
-            	this.router.navigate(['index'])
+            	this.router.navigate(['login'])
             }
         });
 		
