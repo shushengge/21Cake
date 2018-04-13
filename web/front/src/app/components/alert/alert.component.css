@@ -15,6 +15,7 @@ p{
     font-size:30px;
     background:#fff;
     border-radius:0.533333rem;
+    letter-spacing:0.013333rem;;
 }
 
 @media screen and (min-width:992px) {

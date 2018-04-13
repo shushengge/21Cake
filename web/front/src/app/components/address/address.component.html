@@ -4,6 +4,9 @@
         <p>编辑配送地址</p>
         <p class="save" (click)="save()">保存</p>
     </div>
+
+    <alert *ngIf="show" params="请输入完整信息"></alert>
+    
     <div class="content">
         <p>
             <label for="name">姓名</label>

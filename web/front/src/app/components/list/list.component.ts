@@ -102,4 +102,8 @@ export class ListComponent implements OnInit {
             }
         });
     }
+
+    trackByName(index, obj) {
+        return obj._id;
+    }
 }

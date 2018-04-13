@@ -17,6 +17,7 @@ export class AddressComponent implements OnInit {
   province: Array<any> = [];
   city: Array<any> = [];
   town: Array<any> = [];
+  show: boolean = false;
 
     ngOnInit() {
         this.http.get("http://localhost:4200/assets/area/region.json").then((res)=>{
@@ -81,6 +82,11 @@ export class AddressComponent implements OnInit {
         if(name && phone && province!="__请选择__" && city!="__请选择__" && town!="__请选择__" && street && men){
             this.address.address = arr;
             this.router.navigate(["/orderlist"]);
+        }else{
+             this.show = true;
+             setTimeout(()=>{
+                 this.show = false;
+             }, 1000)
         }
     }
 
