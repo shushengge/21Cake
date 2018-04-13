@@ -29,6 +29,7 @@ export class CarComponent implements OnInit {
 	proTjDataset: Array<any>;
 	srcDelLink: string = this.http.baseurl + 'temp/';
 	showCar: boolean = false;
+	showAlert: boolean = false;
 
 
 	delAll(e){
@@ -115,12 +116,15 @@ export class CarComponent implements OnInit {
 		order['products'] = this.carDataset;
 		console.log(order);
 		this.http.get('userOrder',{userid: this.userid, status: 0}).then((res)=>{
+			// console.log(res);
 			if(res['status']){
 				if(res['data'].length > 0){
 					// 更新订单
 					this.http.get('proUpdate',{userid:order['userid'], status: order['status'], products: order['products']}).then((res)=>{
 						if(res['status']){
 							// 跳转到order页面
+							console.log('update');
+							this.router.navigate(['orderlist']);
 						}
 					})
 				}else {
@@ -128,10 +132,25 @@ export class CarComponent implements OnInit {
 					this.http.get('insertOrder',order).then((res)=>{
 						if(res['status']){
 							// 跳转到order页面
-							console.log('tiaozhuan')
+							console.log('tiaozhuan');
+							this.router.navigate(['orderlist']);
+
 						}
 					})
 				}
+			}else if(!res['error']) {
+				// 直接插入数据
+				this.http.get('insertOrder',order).then((res)=>{
+					if(res['status']){
+						// 跳转到order页面
+						console.log('tiaozhuan');
+						this.router.navigate(['orderlist']);
+
+					}
+				})
+			}else{
+				// 跳转到登录页面
+				this.router.navigate(['login']);
 			}
 		})
 		
@@ -203,7 +222,8 @@ export class CarComponent implements OnInit {
 								if(n===1){
 									this.router.navigate(['car']);
 								}else {
-									alert('成功加入购物车！');
+									// alert('成功加入购物车！');
+									this.showAlert = true;
 								}
 
 							}
@@ -222,7 +242,9 @@ export class CarComponent implements OnInit {
 							if(n===1){
 								this.router.navigate(['car']);
 							}else {
-								alert('成功加入购物车！');
+								// alert('成功加入购物车！');
+								this.showAlert = true;
+
 								this.changePic();
 
 							}
@@ -245,7 +267,9 @@ export class CarComponent implements OnInit {
 						if(n===1){
 							this.router.navigate(['car']);
 						}else {
-							alert('成功加入购物车！');
+							// alert('成功加入购物车！');
+							this.showAlert = true;
+
 							this.changePic();
 
 						}

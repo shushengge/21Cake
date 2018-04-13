@@ -3,6 +3,7 @@
 	height:100%;
 	display:flex;
 	flex-direction:column;
+	font-size:0.32rem;
 }
 	.lx-car{
 		width:100%;
@@ -62,7 +63,8 @@
 			    		height:0.693333rem;
 			    		width:0.693333rem;
 			    		line-height:0.693333rem;
-			  			font-size:24px;
+			  			// font-size:24px;
+			  			font-size:0.32rem;
 			    		cursor:pointer;
 			    		border:none;
 			    	}
@@ -95,7 +97,7 @@
 			    	line-height:0.8rem;
 			    	padding-left:2.133333rem;
 			    	color: #707070;
-			    	background: url(../../../assets/static/card.png) no-repeat,url(../../../assets/static/go-right.png) no-repeat right;
+			    	background: url(../../../assets/static/cart-birthday.jpg) no-repeat,url(../../../assets/static/go-right.png) no-repeat right;
 			    	background-size: 1.813333rem 0.8rem,0.213333rem 0.373333rem;
 			    }
 			}
@@ -106,7 +108,8 @@
 		    text-align: center;
 		    background: #fff;
 		    line-height: 3.2rem;
-		    font-size: 34px;
+		    // font-size: 34px;
+		    font-size:0.453333rem;
 		}
 		.car-dp {
 			.dp-top {
@@ -144,7 +147,7 @@
 				    text-overflow: ellipsis;
 			    }
 			    span.recommend-cart {
-			    	background: url(../../../assets/img/buycar2.png) no-repeat center;
+			    	background: url(../../../assets/static/candle-cart.png) no-repeat center;
 					display:block;
 					width:0.8rem;
 					height:0.8rem;
@@ -170,8 +173,9 @@
 				cursor:pointer;
 				height:1.173333rem;
 				width:1.173333rem;
-				background: url(../../../assets/static/delete.png) no-repeat center;
-				background-size:0.666667rem 0.533333rem;
+				background: url(../../../assets/static/delect-min.png) no-repeat center;
+				// background-size:0.666667rem 0.533333rem;
+				background-size: 0.4rem 0.4rem;
 			}
 			li {
 				height:1.173333rem;
@@ -185,7 +189,8 @@
 				span:nth-child(1){
 					margin-top:0.133333rem;
 					font-weight:bold;
-					font-size:32px;
+					// font-size:32px;
+					font-size:0.426667rem;
 					line-height:0.426667rem;
 				}
 				span:nth-child(2) {

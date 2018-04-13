@@ -17,6 +17,7 @@ export class DetailsComponent implements OnInit {
 	srcLink: string = this.http.baseurl + 'temp/';
 	srcDelLink: string = this.http.baseurl + 'temp/';
 	proTjDataset: Array<any>;
+	showAlert: boolean = false;
 
 	constructor(private route:ActivatedRoute, private router:Router, private http: HttpclientService ) { }
 
@@ -98,7 +99,8 @@ export class DetailsComponent implements OnInit {
 								if(n===1){
 									this.router.navigate(['car']);
 								}else {
-									alert('成功加入购物车！');
+									// alert('成功加入购物车！');
+									this.showAlert = true;
 								}
 
 							}
@@ -116,7 +118,9 @@ export class DetailsComponent implements OnInit {
 							if(n===1){
 								this.router.navigate(['car']);
 							}else {
-								alert('成功加入购物车！');
+								// alert('成功加入购物车！');
+								this.showAlert = true;
+
 							}
 						}
 					})
@@ -130,7 +134,8 @@ export class DetailsComponent implements OnInit {
 						if(n===1){
 							this.router.navigate(['car']);
 						}else {
-							alert('成功加入购物车！');
+							// alert('成功加入购物车！');
+							this.showAlert = true;
 						}
 					}
 				})
@@ -178,9 +183,9 @@ export class DetailsComponent implements OnInit {
 				})
 
             }
-            else {
-            	this.router.navigate(['login'])
-            }
+            // else {
+            // 	this.router.navigate(['login'])
+            // }
         });
 		
 		
