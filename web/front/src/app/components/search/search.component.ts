@@ -19,7 +19,8 @@ export class SearchComponent implements OnInit {
     }
     find(){
         let title = document.querySelector('.mallSearchform_s .mallSearchform_txt');
-        this.http.get('backproducts',{title:title['value']}).then((res) => {
+        this.http.get('frontproducts',{title:title['value']}).then((res) => {
+            console.log(res)
             if(res['status'] == true && title['value'] && res['data'].length >0){
                 this.dataset=res['data']
             }else if(title['value'] == ""){
