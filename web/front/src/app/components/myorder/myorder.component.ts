@@ -19,7 +19,7 @@ export class MyorderComponent implements OnInit {
          if(window.sessionStorage.getItem('username')==undefined){
             this.router.navigate(['login'])
         }
-         this.http.get('userCart',{userid:window.sessionStorage.getItem('userid')}).then((res) => {
+         this.http.get('userOrder',{userid:window.sessionStorage.getItem('userid'),status:0}).then((res) => {
              if(res['status']){
                 document.querySelector('.hinder')['style']['display']='none'
                 this.dataset = res["data"]
