@@ -7,6 +7,7 @@ import * as $ from "jquery";
 export class LoadDirective {
 
     constructor(el: ElementRef) {
+        var img = el.nativeElement;
         img.onload = function(){
             this.setAttribute("src", img.dataset.src);
         }
