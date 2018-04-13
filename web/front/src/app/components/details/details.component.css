@@ -8,6 +8,8 @@
 	height:100%;
 	display:flex;
 	flex-direction:column;
+	font-size:0.32rem;
+	
 }
 .fl{float:left;}
 .fr{float: right;}
@@ -43,17 +45,20 @@
 .detail-pro-box .detail-box-title h3{
 	line-height: 0.773333rem;
 	padding-top:0.266667rem;
-	font-size:48px;
+	/*font-size:48px;*/
+	font-size:0.64rem;
 }
 .detail-pro-box .detail-box-title>p{
-	font-size:28px;
+	/*font-size:28px;*/
+	font-size:0.373333rem;
 	line-height: 0.48rem;
 }
 /*---------------------------1*/
 .detail-pro-box .pro-price{
 	margin-top:0.125rem;
 	height:0.9375rem;
-	font-size: 44px;
+	/*font-size: 44px;*/
+	font-size:0.586667rem;
 	color:#C69C6D;
 	padding-left:0.75rem;
 	line-height: 0.9375rem;
@@ -102,7 +107,8 @@
 	line-height: 1.40625rem;
 	padding-left:0.4375rem;
 	cursor: pointer;
-	font-size:28px;
+	/*font-size:28px;*/
+	font-size:0.373333rem;
 	background: rgba(199,178,153,0.20);
 }
 .detail-pro-box .select-card .jt{
@@ -335,7 +341,7 @@
 }
 
 .lx-detail .detail-suspension .detail-suspension-content{
-	height:627px;
+	/*height:627px;*/
 	position:absolute;
 	left:0;
 	width:100%;
@@ -346,7 +352,8 @@
     padding: 0.373333rem 0.373333rem 1.44rem 0.64rem;
 }
 .lx-detail .detail-suspension .detail-suspension-content .price{
-	font-size: 30px;
+	/*font-size: 30px;*/
+	font-size:0.4rem;
 	line-height: 0.586667rem;
 	margin-bottom: 0.4rem;
 	font-weight: bold;
