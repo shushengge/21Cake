@@ -20,19 +20,19 @@ export class OrderlistComponent implements OnInit {
         this.http.get('userCart?userid=5acb0486cc8fa3dce16177f9').then((res)=>{
             console.log(res)
             if(res['status']){
-                
                 this.dataset = res["data"];
                 var qty = this.dataset['length'] > 0 ? this.dataset['length'] : 1;
                 console.log(this.qty)
                 var total = 0;
-                
+
                 this.dataset.forEach((item)=>{
                     console.log(item)
                     total += item.qty*item.price;
-                    
                 })
                 this.totalprice = total;
-                // $('.orderlist_pro .orderlist_prolist').width(190*this.dataset.length);
+                $('.orderlist_pro .orderlist_prolist').width(190*this.dataset.length);
+
+                
             }
         })
 
