@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
  import { HttpclientService } from "../../servers/httpclient.service"
 import { Router,ActivatedRoute,ParamMap } from '@angular/router'
 import { CommontService } from "../../servers/commont.service";
@@ -11,7 +11,11 @@ import * as $ from "jquery";
   styleUrls: ['./orderlist.component.scss'],
 })
 export class OrderlistComponent implements OnInit {
+    @Input() params : string = "";
+
     show: boolean = false;
+    show1: boolean = false;
+
     qty:Number;
     totalprice:Number;
     dataset:Array<any>;
@@ -49,16 +53,19 @@ export class OrderlistComponent implements OnInit {
 
     sure(){
         this.show = false;
-
-        this.http.get("payUpdate",{userid:window.sessionStorage.getItem('userid'),status:0}).then((res)=>{
-            if(res['data'].ok == 1){
-                this.show = true;
-                setTimeout((e)=>{
-                    // location.href="/index";
-                    this.router.navigate(['/index'])
-                },1500)
-            }
-        })
+        if(this.xx.length>0){
+            this.http.get("payUpdate",{userid:window.sessionStorage.getItem('userid'),status:0}).then((res)=>{
+                if(res['data'].ok == 1){
+                    this.show = true;
+                    setTimeout((e)=>{
+                        // location.href="/index";
+                        this.router.navigate(['/index'])
+                    },1500)
+                }
+            })
+        }else{
+           this.show1 = true;
+        }
     }
 
     back(){
