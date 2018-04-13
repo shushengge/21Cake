@@ -1,0 +1,140 @@
+<div class="orderlist">
+    <alert *ngIf="show" params="美味即将奉上"></alert>
+    <alert *ngIf="show1" params="地址不能为空"></alert>
+    <div class="orderlist_title">
+        <div class="back" (click)="back()"></div>
+        订单确认
+    </div>
+    <div class="orderlist_container">
+        <div class="orderlist_address">
+            
+            <div class="orderlist_address_change clearfix" *ngIf="xx.length>0">
+                <div class="current_address">
+                    <div class="current_address_txt">
+                        <span class="current_address_info">
+                            <span class="address_name">{{xx[0].name}}</span>
+                            <span class="address_mobile">{{xx[1].phone}}</span>
+                        </span>
+                        <span class="address_address">
+                            {{xx[2].address[0].province}}{{xx[2].address[1].city}}{{xx[2].address[2].town}}{{xx[3].street}}({{xx[4].men}})
+                        </span>
+                    </div>
+                </div>
+                <a routerLink="/address" class="changeAddress">
+                    更换
+                </a>
+            </div>
+
+            <a routerLink="/address" *ngIf="xx.length==0">
+                <div class="new-add-address address-action" >
+                    <span></span>
+                    新增收货地址
+                </div>
+            </a>
+        </div>
+        <div class="orderlist_pro">
+            <div class="cover">
+                <ul class="orderlist_prolist">
+                    <li *ngFor="let item of dataset">
+                        <img src="{{link + item.img}}"/>
+                        <div class="price_box">
+                            <span>2.0磅</span>
+                            <div>
+                                <span class="fl">￥{{item.price}}.00</span>
+                                <span class="fr">{{item.qty}}</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="orderlist_checkout">
+            <li>
+                <span class="delivery_time">
+                <i></i>
+                配送时间
+                </span> 
+                <span class="select_bnt">请选择</span>
+            </li>
+            <li>
+                <span class="delivery_time">
+                优惠券/尊享卡
+                </span> 
+                <span class="select_bnt">无可用</span>
+            </li>
+            <li>
+                <span class="delivery_time">
+                代金卡
+                <span class="info_use">（不能与优惠券同时使用）</span>
+                </span> 
+                <span class="select_bnt">未使用</span>
+            </li>
+        </ul>
+        <div class="orderlist_payways">
+            <h6>支付方法</h6>
+            <ul class="payment_list">
+                <li>
+                    <span class="yu_e">
+                    余额支付 ( ￥0 )
+                    </span> 
+                    <span class="select_bnt_zhifu">
+                        <i></i>
+                    </span>
+                </li>
+                <li class="pay-ways-icon">
+                    <img src="../../../assets/img/pay-zhifubao.png"/>
+                    <span>支付宝</span>
+                    <span class="payment_app">
+                        <i (click)="check($event)" class="active"></i>
+                    </span>
+                </li>
+                <li class="pay-ways-icon">
+                    <img src="../../../assets/img/pay-jdonline.png"/>
+                    <span>京东支付</span>
+                    <span class="payment_app">
+                        <i (click)="check($event)"></i>
+                    </span>
+                </li>
+                <li class="pay-ways-icon">
+                    <img src="../../../assets/img/pay-cmb.jpg"/>
+                    <span>银行卡支付</span>
+                    <span class="payment_app">
+                        <i (click)="check($event)"></i>
+                    </span>
+                </li>
+                <li class="pay-ways-icon invoice">
+                    <span>发票</span>
+                    <span class="invoice_add">
+                        不需要
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div class="leave-message">
+            <h6>订单留言</h6>
+            <div>
+                <textarea name="memo" id="action-add-memo" placeholder="请留下您对订单或商品的特殊要求，200字以内"></textarea>
+            </div>
+        </div>
+        <div class="pay-money">
+            <h6>金额明细</h6>
+            <ul class="total_details">
+                <li class="cost_item">
+                    <span class="fl">商品总额</span>
+                    <span class="fr">￥{{totalprice}}.00</span>
+                </li>
+                <li class="cost_freight">
+                    <span class="fl">配送服务费</span>
+                    <span class="fr">￥0.00</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="orderlist_pay clearfix">
+        <button class="orderlist_btn fr" (click)="sure()">下单</button>
+        <span class="fr">
+            共￥
+            <span class="orderlist_total">{{totalprice}}.00</span>
+        </span>
+    </div>
+</div>

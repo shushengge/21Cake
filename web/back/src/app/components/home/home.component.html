@@ -1,0 +1,28 @@
+<div class="home">
+    <div class="home_head">
+        <div class="home_head_left">
+            <div>后台管理<span>系统</span></div>
+        </div>
+        <div class="home_head_right">
+            <select id="translate">
+                <option value="en">EN</option>
+                <option value="cn">CN</option>
+            </select>
+        </div>
+    </div>
+    <div class="zhanwei"></div>
+    <div class="home_body">
+        <div class="home_nav">
+            <div class="menu_hide"><i class="menu_side fa fa-bars"></i></div>
+            <div [class.admin]="1==1"><i class="fa fa-user-o"></i><p>管理员:<span>admin</span></p></div>
+            <a routerLink="welcome"><div><i class="fa fa-home wel"></i><span>欢迎使用</span></div></a>
+            <a routerLink="users"><div><i class="fa fa-user-circle"></i><span>用户管理</span></div></a>
+            <a routerLink="products"><div><i class="fa fa-shopping-bag"></i><span>商品管理</span></div></a>
+            <a routerLink="cart"><div><i class="fa fa-motorcycle"></i><span>购物车</span></div></a>
+            <a routerLink="indent"><div><i class="fa fa-heart"></i><span>订单管理</span></div></a>
+        </div>
+        <div class="home_content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

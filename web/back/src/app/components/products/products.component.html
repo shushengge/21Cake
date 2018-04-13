@@ -1,0 +1,76 @@
+<div class="products_box box">
+  <div class="products_head head">
+    <h2>商品</h2>
+  </div>
+  <div class="products_nav nav">
+    <i class="fa fa-home wel"></i>
+    <span>商品管理</span>
+    <i class="fa fa-angle-right"></i>
+  </div>
+  <div class="products_describe describe">
+    <span>商品页面，添加商品，编辑，下架，删除，都可以配置单独的权限，后台简单调用权限接口，每个按钮和文字都可以控制，并在后台管理中给其他人配置操作权限。</span>
+  </div>
+  <div class="products_form form">
+    <div class="form_head">
+      所有商品
+    </div>
+    <div class="form_nav">
+      <div class="input-group fl pro-header-l top form_search">
+        <input type="text" placeholder="Search" class="form-control search-input inp">
+        <button class="btn btn-primary btn">Search</button>
+      </div>
+      <div class="top fr add"><button class="btn btn-primary addbtn">Add</button></div>
+      <!-- <div class="form_page">
+                <div class="page">
+                    <div class="back">
+                        <i></i>
+                    </div>
+                    <div class="page_number"></div>
+                    <div class="next">
+                        <i></i>
+                    </div>
+                </div>
+            </div> -->
+      <!-- <ul class="pagination">
+    					<li class="page-item"><span  class="page-link p1" ref="p1">1</span></li>
+    					<li class="page-item"><span  class="page-link p2" ref="p2">...</span></li>
+    					<li class="page-item one"><span  class="page-link"></span></li>
+    					<li class="page-item two"><span  class="page-link"></span></li>
+    					<li class="page-item mid"><span  class="page-link"></span></li>
+    					<li class="page-item third"><span  class="page-link"></span></li>
+    					<li class="page-item last"><span  class="page-link"></span></li>
+    					<li class="page-item"><span  class="page-link pls">...</span></li>
+    					<li class="page-item"><span  class="page-link pl pla"></span></li>
+    					<li class=""><span class="">共有{ds}条记录</span></li>
+    				</ul> -->
+    </div>
+
+    <div class="form_content">
+      <table *ngIf="dataset" class="table table-striped">
+        <thead>
+          <tr>
+            <ng-template ngFor let-key [ngForOf]="columns">
+              <th [class.item-hide]="hideColumns.indexOf(key) > -1">{{key}}</th>
+            </ng-template>
+            <th>Handle</th>
+            <!-- <th>Handle</th> -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of dataset,let idx=index">
+            <ng-template ngFor let-key [ngForOf]="columns">
+              <td [class.item-hide]="hideColumns.indexOf(key) > -1">{{item[key]}}</td>
+            </ng-template>
+            <td class="last-td">
+              <input type="button" class="btn btn-secondary btn-sm" value="compile" (click)="addProduct($event)"/>
+              <input type="button" class="btn btn-danger btn-sm delBtn" [attr.data-idx]="idx" value="del" (click)="del($event)" [attr.data-id]="item._id"/>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,42 @@
+<div class="address">
+    <div class="head">
+        <i class="fa fa-chevron-left" (click)="back()"></i>
+        <p>编辑配送地址</p>
+        <p class="save" (click)="save()">保存</p>
+    </div>
+
+    <alert *ngIf="show" params="请输入完整信息"></alert>
+    
+    <div class="content">
+        <p>
+            <label for="name">姓名</label>
+            <input type="text" id="name" placeHolder="收货人姓名" />
+        </p>
+        <p>
+            <label for="phone">手机</label>
+            <input type="text" id="phone" placeHolder="收货人手机号" />
+        </p>
+        <p>
+            <label for="address">地址</label>
+            <select id="province" (click)="province1($event)">
+                <option>__请选择__</option>
+                <option *ngFor="let key of province" >{{key}}</option>
+            </select>
+            <select id="city" (click)="city1($event)">
+                <option>__请选择__</option>
+                <option *ngFor="let key of city">{{key}}</option>
+            </select>
+            <select id="town">
+                <option>__请选择__</option>
+                <option *ngFor="let key of town">{{key}}</option>
+            </select>
+        </p>
+        <p>
+            <label for="street">街道</label>
+            <input type="text" id="street" />
+        </p>
+        <p class="men">
+            <input type="text" id="men" placeHolder="门牌号" />
+        </p>
+    </div>
+</div>

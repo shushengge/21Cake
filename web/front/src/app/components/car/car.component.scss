@@ -1,0 +1,235 @@
+.lx-car-box{
+	width:100%;
+	height:100%;
+	display:flex;
+	flex-direction:column;
+	font-size:0.32rem;
+}
+	.lx-car{
+		width:100%;
+		background: #F6F6F6;
+		padding-bottom:1.733333rem;
+		overflow:auto;
+		flex:1;
+		.car-top-tip{
+			height:1.013333rem;
+			line-height:1.013333rem;
+			text-align:center;
+		}
+		.car-list{
+			li {
+				background: #fff;
+			    margin-bottom: 0.4rem;
+			    padding: 0 0.533333rem;
+			    padding-bottom: 0.4rem;
+			    position: relative;
+			    >div>a>img{
+			    	display:block;
+			    	width:2.933333rem;
+			    	height:3.2rem;
+			    }
+
+			    p {
+			    	padding-left:3.546667rem;
+			    }
+			    p.ps{
+			    	color: #969696;
+			    }
+			    p.price {
+			    	margin-top:0.32rem;
+			    }
+			    .p1-title{
+			    	padding-top:0.533333rem;
+			    }
+			    .car-pro-num {
+			    	position:absolute;
+			    	right:0.533333rem;
+			    	top:2.0rem;
+			 
+			    	>span{
+			    		float:left;
+			    		text-align:center;
+			    		height:0.693333rem;
+			    		width:0.693333rem;
+			    		line-height:0.693333rem;
+			    		background: #F0F0F0;
+			    		cursor:pointer;
+			    	}
+
+			    	.val {
+			    		background: #F7F7F7;
+			    		float:left;
+			    		text-align:center;
+			    		height:0.693333rem;
+			    		width:0.693333rem;
+			    		line-height:0.693333rem;
+			  			// font-size:24px;
+			  			font-size:0.32rem;
+			    		cursor:pointer;
+			    		border:none;
+			    	}
+			    	img.img1 {
+			    		margin:0.32rem auto;
+			    		width:0.32rem;
+			    		height:0.053333rem;
+			    	}
+			    	img.img-del{
+			    		margin: 0.186667rem auto;
+			    		width:0.32rem;
+			    		height:0.32rem;
+			    	}
+			    	img.img2 {
+			    		margin:0.186667rem auto;
+			    		width:0.32rem;
+			    		height:0.32rem;
+			    	}
+			    }
+			    .laid-count {
+			    	height:1.226667rem;
+			    	line-height:1.226667rem;
+			    	padding-left:1.466667rem;
+			    	background: url(../../../assets/static/cart-laid.png) no-repeat 0.266667rem center;
+				    background-size: 1.2rem 0.933333rem;
+			    }
+			    .birthday-brand {
+			    	display:block;
+			    	height: 0.8rem;
+			    	line-height:0.8rem;
+			    	padding-left:2.133333rem;
+			    	color: #707070;
+			    	background: url(../../../assets/static/cart-birthday.jpg) no-repeat,url(../../../assets/static/go-right.png) no-repeat right;
+			    	background-size: 1.813333rem 0.8rem,0.213333rem 0.373333rem;
+			    }
+			}
+		}
+		.car-kong {
+			height: 3.2rem;
+		    width: 100%;
+		    text-align: center;
+		    background: #fff;
+		    line-height: 3.2rem;
+		    // font-size: 34px;
+		    font-size:0.453333rem;
+		}
+		.car-dp {
+			.dp-top {
+				height: 1.013333rem;
+				line-height:1.013333rem;
+				text-align:center;
+			}
+			li {
+				width: 48.2%;
+			    background: #fff;
+			    margin-left: 1.2%;
+			    margin-bottom: 1.2%;
+			    float: left;
+			    position: relative;
+			    padding-bottom: 18px;
+			    .to-del {
+			    	color: #442818;
+	    			cursor: pointer;
+			    }
+			    img {
+			    	display:block;
+					width:100%;
+				    width: 3.4375rem;
+				    height: 3.78125rem;
+				    margin: 0 auto;
+			    }
+			    h4 {
+			    	margin:0.125rem 0.3125rem;
+					height:0.533333rem;
+					text-overflow: ellipsis;
+			    }
+			    p.cake-price {
+			    	margin: 0 0.266667rem;
+				    height: 0.533333rem;
+				    text-overflow: ellipsis;
+			    }
+			    span.recommend-cart {
+			    	background: url(../../../assets/static/candle-cart.png) no-repeat center;
+					display:block;
+					width:0.8rem;
+					height:0.8rem;
+					position:absolute;
+					right:0.266667rem;
+					bottom: 0.346667rem;
+					cursor: pointer;
+			    }
+
+			}
+		}
+		.car-bottom-js {
+			height:1.173333rem;
+			position:fixed;
+			left:0;
+			bottom:0;
+			background: #fff;
+			width:100%;
+		    // box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.10);
+			.car-clear {
+				display:block;
+				float:left;
+				cursor:pointer;
+				height:1.173333rem;
+				width:1.173333rem;
+				background: url(../../../assets/static/delect-min.png) no-repeat center;
+				// background-size:0.666667rem 0.533333rem;
+				background-size: 0.4rem 0.4rem;
+			}
+			li {
+				height:1.173333rem;
+				line-height:1.173333rem;
+				text-align:center;
+				float:left;
+				span {
+					display:block;
+					height:0.586667rem;
+				}
+				span:nth-child(1){
+					margin-top:0.133333rem;
+					font-weight:bold;
+					// font-size:32px;
+					font-size:0.426667rem;
+					line-height:0.426667rem;
+				}
+				span:nth-child(2) {
+					line-height:0.266667rem;
+				}
+			}
+			.li01 {
+				width:1.706667rem;
+
+			}
+			.li02 {
+				width:0.533333rem;
+				
+			}
+			.li03 {
+				width:0.96rem;
+				margin-right:0.266667rem;
+			}
+			.li04 {
+			
+				.car-js {
+					display:block;
+				    background: #442818;
+				    color:#fff;
+				    height:100%;
+			    	width:2.56rem;
+				}
+			}
+
+		}
+	}
+.fl{float:left;}
+.fr{float: right;}
+.clearfix::after{
+    content:"";
+    display: block;
+    height: 0;
+    clear:both;
+    overflow:hidden;
+    visibility: hidden;
+    zoom:1;
+}

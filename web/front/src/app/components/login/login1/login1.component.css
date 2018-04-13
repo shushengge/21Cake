@@ -1,0 +1,8 @@
+.login-cont ul li{height:1.253333rem;}
+.login-cont ul li input{padding:0.266667rem 0;border:0 none;border-bottom:1px solid #969696;width:100%;font-size:0.373333rem;height:100%;padding-left:0.15rem;}
+.login-cont ul li input::-webkit-input-placeholder{color:#D5BFA7;}
+.login-cont ul li .hint{border:0 none;color:#FF2626;}
+.login-btn{width:100%;height:1.12rem;background:#442818;color:#fff;font-size:0.373333rem;}
+.login-foot{margin-top:0.666667rem;overflow:hidden;}
+.login-foot a{font-size:0.32rem;color:#442818;margin-left:0.213333rem;}
+.login-foot input{height:0.4rem;width:0.4rem;}

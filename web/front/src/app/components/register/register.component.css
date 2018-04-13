@@ -1,0 +1,21 @@
+#reg .head{height:1.28rem;text-align: center;background:#ccc;}
+#reg .head h1{line-height:1.28rem;}
+#reg .reg-box{padding:0 0.746667rem;}
+#reg .reg-box .reg-title{font-size:0.4rem;text-align: center;margin-top:0.4rem;}
+#reg .reg-box .reg-list{margin-top:0.666667rem;}
+#reg .reg-box .reg-list ul li{height:1.253333rem;border-bottom:1px solid #969696;}
+#reg .reg-box .reg-list ul li .note{margin:0.106667rem 0;width:4.0rem;height:0.986667rem;border:0 none;padding:0;background:#442818;color:#fff;font-size:0.373333rem;text-align:center;}
+#reg .reg-box .reg-list ul li .in-note{width:4.4rem;}
+#reg .reg-box .reg-list ul li .in-code{width:4.4rem;}
+#reg .reg-box .reg-list ul li .code{margin:0.106667rem 0;width:2.933333rem;height:0.986667rem;border:1px solid #ccc;padding:0;font-size:0.373333rem;text-align: center;line-height:0.986667rem;color:#333;font-weight:bold;}
+#reg .reg-box .reg-list ul .li-hint{border:0 none;}
+#reg .reg-box .reg-list ul .li-hint .hint{color:#FF2626;}
+#reg .reg-box .reg-list ul li input{padding:0.266667rem 0;border:0 none;width:100%;font-size:0.373333rem;height:100%;padding-left:0.15rem;}
+#reg .reg-box .reg-list ul li input::-webkit-input-placeholder{color:#D5BFA7;}
+#reg .reg-box .reg-btn{width:100%;height:1.12rem;background:#442818;color:#fff;font-size:0.373333rem;}
+#reg .reg-box .reg-list ul li img{width:1.066667rem;height:1.066667rem;}
+#reg .reg-box .reg-foot{font-size:0.32rem;color:#442818;margin-top: 0.666667rem;}
+#reg .reg-box .reg-foot span{color:#2A99FA;margin:0 0.106667rem;}
+#reg .reg-box .reg-foot input{height:0.4rem;width:0.4rem;margin-right: 0.106667rem;}
+#reg{display: flex;flex-direction: column;height:100%;}
+#reg .reg-box{flex:1;overflow: auto;}

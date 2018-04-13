@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';   //服务
 
 //element-angular
 import { ElModule } from 'element-angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -19,7 +20,21 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { Router } from "./router/router";
 
 import { HttpclientService } from "./servers/httpclient.service";
+import { CommontService } from "./servers/commont.service";
 
+
+import { FooterComponent } from './components/footer/footer.component';
+import { SearchComponent } from './components/search/search.component';
+import { HotshopComponent } from './components/hotshop/hotshop.component';
+import { MyComponent } from './components/my/my.component';
+import { Login1Component } from './components/login/login1/login1.component';
+import { Login2Component } from './components/login/login2/login2.component';
+import { LoadDirective } from './directives/load.directive';
+import { OrderlistComponent } from './components/orderlist/orderlist.component';
+
+import { MyorderComponent } from './components/myorder/myorder.component';
+import { AlertComponent } from './components/alert/alert.component';
+import { AddressComponent } from './components/address/address.component';
 
 @NgModule({
   declarations: [
@@ -31,16 +46,28 @@ import { HttpclientService } from "./servers/httpclient.service";
     RegisterComponent,
     DetailsComponent,
     SpinnerComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchComponent, 
+    HotshopComponent, 
+    FooterComponent ,
+    Login1Component,
+    Login2Component,
+    MyComponent ,
+    OrderlistComponent,
+    LoadDirective,
+    AddressComponent,
+    MyorderComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     ElModule.forRoot(),
-    Router
+    Router,
+    BrowserAnimationsModule
   ],
-  providers: [HttpclientService],
+  providers: [HttpclientService, CommontService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

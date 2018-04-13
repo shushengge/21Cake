@@ -1,0 +1,20 @@
+#myorder{display:flex;flex-direction:column;height:100%;}
+#myorder .header{height:1.173333rem;text-align: center;font-size:0.4rem;line-height: 1.173333rem;position:relative;border-bottom: 1px solid #ccc;color:#4E3526;}
+#myorder .header i{width: 1.173333rem;height:1.173333rem;font-size:0.666667rem;position:absolute;left:0;top:0;color:#000;}
+#myorder .nav ul{overflow: hidden;height:1.333333rem;line-height:1.333333rem;font-size:0.4rem;display: flex;justify-content:space-between;padding:0 1.6rem;border-bottom: 0.013333rem solid #ccc;}
+#myorder .nav ul li{color:#707070;}
+#myorder .nav ul .li1{color:#4E3526;border-bottom: 0.056667rem solid #333;}
+#myorder .cont{flex:1;overflow:auto;}
+#myorder .cont .orderlist{min-height: 11.293333rem;background:#F6F6F6;padding:0.8rem 0.4rem;position:relative;}
+#myorder .cont .orderlist .pro-box{background:#fff;height:6.853333rem;border-top:0.056667rem solid #333;border-radius:0.133333rem;padding:0 0.533333rem;box-shadow: 0px 0px 0.506667rem 0px #ccc;}
+#myorder .cont .orderlist .pro-box .top{height:1.28rem;line-height: 1.28rem;font-size:0.32rem;}
+#myorder .cont .orderlist .pro-box .top img{height:0.8rem;width:0.8rem;margin-top: 0.266667rem;}
+#myorder .cont .orderlist .pro-box .pro-list{overflow:auto;padding-bottom:0.533333rem;}
+#myorder .cont .orderlist .pro-box .pro-list ul{overflow:hidden;height:2.266667rem;width:13.333333rem;}
+#myorder .cont .orderlist .pro-box .pro-list li{float: left;margin-right:0.4rem;}
+#myorder .cont .orderlist .pro-box .pro-list li img{height:2.266667rem;width:2.266667rem;}
+#myorder .cont .orderlist .pro-box .box{height:2.666667rem;overflow:hidden;border-bottom: 0.013333rem solid #ccc;}
+#myorder .cont .orderlist .pro-box .price{color:#969696;height:1.013333rem;line-height:1.013333rem;font-size:0.32rem;}
+#myorder .cont .orderlist .pro-box .price .span2,.span3{color:#FF3737;}
+#myorder .cont .orderlist .pro-box .box-btn{background: #F6F6F6;height:1.333333rem;text-align: center;line-height: 1.333333rem;font-size:0.373333rem;font-weight:bold;border-radius:0.133333rem;color:#000;}
+#myorder .cont .orderlist .hinder{background:#F6F6F6;position:absolute;left:0;top:0;z-index: 99999;height:10.493333rem;width:10.0rem;text-align: center;line-height:10.493333rem;font-size:0.4rem;display:none;}

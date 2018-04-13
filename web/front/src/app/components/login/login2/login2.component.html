@@ -1,0 +1,22 @@
+<div class="login-list">
+    <ul>
+        <li><input type="text" placeholder="输入手机号" class="phone" (change)="phone()"/></li>
+        <li>
+            <input type="text" placeholder="请输入验证码" class="in-code" (change)="code()"/>
+            <img src="./assets/img-my/reg1.png" class="fr" (click)="changeCode()"/>
+            <div class="code fr"></div>
+        </li>
+        <li>
+            <input type="text" placeholder="短息验证码" class="in-note" (change)="innote()"/>
+            <input type="button" class="note fr" (click)="getnote()" value="获取验证码"/>
+        </li>
+        <li class="li-hint"><input type="text" class="hint"/></li>
+    </ul>
+</div>
+<div>
+    <input type="button" value="登录" class="login-btn" (click)="tologin()"/>
+</div>
+<div class="login-foot">
+    <input type="checkbox" class="fl"/><a class="fl">记住帐号</a>
+    <a class="fr" routerLink="/register">去注册</a><a class="fr">忘记密码</a>
+</div>

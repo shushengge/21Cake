@@ -1,2 +1,15 @@
-<header></header>
-<h1>我是登录</h1>
+<div class="login-box">
+    <header></header>
+    <div id="login">
+        <div class="login-box">
+            <div class="login-nav">
+                <ul>
+                    <a routerLink="/login/login1"><li class="fl li-left" (click)="tologin1()">帐号密码登录</li></a>
+                    <a routerLink="/login/login2"><li class="fl li-right" (click)="tologin2()">手机验证码登录</li></a>
+                </ul>
+            </div>
+            <router-outlet></router-outlet>
+        </div>
+    <footer></footer>
+    </div>
+</div>

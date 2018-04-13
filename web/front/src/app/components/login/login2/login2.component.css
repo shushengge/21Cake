@@ -1,0 +1,15 @@
+.login-list{margin-top:0.666667rem;}
+.login-list ul li{height:1.253333rem;border-bottom:1px solid #969696;}
+.login-list ul li .note{margin:0.106667rem 0;width:4.0rem;height:0.986667rem;border:0 none;padding:0;background:#442818;color:#fff;font-size:0.373333rem;}
+.login-list ul li .in-note{width:4.4rem;}
+.login-list ul li .in-code{width:4.4rem;}
+.login-list ul li .code{margin:0.106667rem 0;width:2.933333rem;height:0.986667rem;border:1px solid #ccc;padding:0;font-size:0.373333rem;text-align: center;line-height:0.986667rem;color:#333;font-weight:bold;}
+.login-list ul .li-hint{border:0 none;}
+.login-list ul .li-hint .hint{color:#FF2626;}
+.login-list ul li input{padding:0.266667rem 0;border:0 none;width:100%;font-size:0.373333rem;height:100%;padding-left:0.15rem;}
+.login-list ul li img{width:1.066667rem;height:1.066667rem;}
+.login-list ul li input::-webkit-input-placeholder{color:#D5BFA7;}
+.login-btn{width:100%;height:1.12rem;background:#442818;color:#fff;font-size:0.373333rem;}
+.login-foot{margin-top:0.666667rem;overflow:hidden;}
+.login-foot a{font-size:0.32rem;color:#442818;margin-left:0.213333rem;}
+.login-foot input{height:0.4rem;width:0.4rem;}

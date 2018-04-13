@@ -1,0 +1,333 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-09 20:39:48
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-09 20:39:48
+*/
+
+.aa{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    .cc{
+        flex:1;
+        overflow-x:hidden;
+        .searchbox{
+            input{
+               width: 100%;
+               height: 0.8rem;
+               line-height: 0.8rem;
+               border: 1px solid #fff;
+               padding-left: 1.013333rem;
+               font-size:0.373333rem;
+               color: #fff;
+               padding-right: 0.3672222rem;
+               border-radius: 0.133333rem;
+               background: url(//i1.ygimg.cn/pics/mobile/appointment/indexNicon/search-gray.png) 0.373333rem center no-repeat #f5f4f4;
+               background-size: 0.373333rem 0.373333rem;
+               text-align:center;
+            }
+        }
+        #cake{
+            .banner{
+                height: 5.093333rem;
+                img{
+                    width: 100%;
+                }
+            }
+            .cake_home{
+                padding-top:0.533333rem;
+                margin:0 0.533333rem;
+                font-size:0.32rem;
+                color: #442818;
+                .cake_home_news{
+                    overflow: hidden;
+                    text-align: center;
+                    margin: 0.24rem 0;
+                    height: 0.48rem;
+                    display:flex;
+                    justify-content: space-between;
+                    li{
+                        flex:1;
+                        line-height: 0.48rem;
+                        color: #C69C6D;
+                        vertical-align: middle;
+                        i{
+                            height: 0.373333rem;
+                            width: 0.373333rem;
+                            margin-top: -2px;
+                            display: inline-block;
+                            vertical-align: middle;
+                            background:url("../../../assets/img/21cake_r2_c2.png") no-repeat;
+                            background-size: 0.373333rem;
+                        }
+                    }
+                }
+                .cake_home_memu{
+                    display:flex;
+                    justify-content: space-between;
+                    li{
+                        flex:1;
+                        text-align: center;
+                        margin-right: 4%;
+                        a{
+                            display:block;
+                            text-decoration: none;
+                            cursor: pointer;
+                            color: #442818;
+                            img{
+                                width: 70%;
+                                display: block;
+                                min-height: 1.066667rem;
+                                margin: 0 auto;
+                            }
+                        }
+                    }
+                }
+                .cake_home_good{
+                    min-height: 8.0rem;
+                    margin-top: 0.266667rem;
+                    border-top: 1px solid #E5E5E5;
+                    .title-goods{
+                        padding-top: 0.266667rem;
+                        span{
+                            color: #322418;
+                            display: inline-block;
+                            height: 0.533333rem;
+                            font-size: 0.346667rem;
+                            background: #F4EBE2;
+                            border-radius: 100px;
+                            padding: 0 0.266667rem;
+                            line-height: 0.533333rem;
+                        }
+                        a{
+                            float:right;
+                            color: #808080;
+                            .title_goods_icon{
+                                background:url("../../../assets/img/21cake_r2_c3.png") center no-repeat;
+                                display: inline-block;
+                                vertical-align: middle;
+                                margin-top: -0.133333rem;
+                                width: 0.186667rem;
+                                height: 0.32rem;
+                                background-size: 0.186667rem ;
+                            }
+                        }
+                    }
+                    .shop_goods{
+                        margin-top: 0.266667rem;
+                        font-size: 0.32rem;
+                        li{
+                            margin-bottom:0.266667rem;
+                            background: #FFF;
+                            border: 1px solid #F2EAE4;
+                            box-shadow: 0 4px 12px 0 rgba(0,0,0,0.06);
+                            border-radius: 5px;
+                            overflow: hidden;
+                            .bottom_price_cart{
+                                position: relative;
+                                padding-bottom: 0.373333rem;
+                                h4{
+                                    color: #A6A6A6;
+                                    margin: 0.266667rem 0.266667rem 0 0.266667rem;
+                                    vertical-align: bottom;
+                                    .title{
+                                        font-weight: bold;
+                                        font-size: 0.4rem;
+                                        color: #322418;
+                                        display: inline-block;
+                                        margin-right: 0.213333rem;
+                                        max-width: 50%;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                        vertical-align: bottom;
+                                    }
+                                    .price{
+                                        font-size: 0.4rem;
+                                        color: #C69C6D;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        margin-top: -0.106667rem;
+                                        vertical-align: bottom;
+
+                                    }
+                                }
+                                p{
+                                    width: 70%;
+                                    line-height: 0.453333rem;
+                                    margin-top: 0.186667rem;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    margin-left: 0.266667rem;
+                                    color:#442818;
+                                    font-size: 0.293333rem;
+                                }
+                                .addcar{
+                                    position: absolute;
+                                    bottom: 0.133333rem;
+                                    right: 0.266667rem;
+                                    background: none;
+                                    border: none;
+                                    .addcar_icon{
+                                        display:block;
+                                        width: 1.2rem;
+                                        height: 1.2rem;
+                                        background:url("../../../assets/img/buycar.png") no-repeat;
+                                        background-size: 80px auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .cake_home_active{
+                    background: #fff;
+                    padding-bottom: 0.533333rem;
+                    width: 100%;
+                    overflow: hidden;
+                    border-bottom: 1px solid #E5E5E5;
+                    font-size: 0.32rem;
+                    color: #442818;
+                    h3{
+                        margin-bottom: 0.4rem;
+                        span{
+                            color: #322418;
+                            display: inline-block;
+                            height: 0.533333rem;
+                            font-size: 0.346667rem;
+                            background: #F4EBE2;
+                            border-radius: 100px;
+                            padding: 0 0.266667rem;
+                            line-height: 0.533333rem;
+                        }
+                    }
+                    .mould_activity_box{
+                        box-shadow: 0 0 0.266667rem 0 rgba(0,0,0,0.10);
+                        border-radius: 0.133333rem;
+                        position: relative;
+                        margin-left: 0.08rem;
+                        a{
+                            display:block;
+                            overflow: hidden;
+                            background: #fff;
+                            border-radius: 0.133333rem;
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            font-weight: normal;
+                            color: #442818;
+                            .left_txt{
+                                width: 40%;
+                                float: left;
+                                background: #fff;
+                                text-align: left;
+                                h4{
+                                    font-size: 0.4rem;
+                                    line-height: 0.586667rem;
+                                    margin-top: 0.32rem;
+                                    text-overflow: ellipsis;
+                                    overflow: hidden;
+                                    height: 0.586667rem;
+                                    white-space: nowrap;
+                                    padding: 0 0.266667rem;
+                                    font-weight: normal;
+                                }
+                                p{
+                                    font-size: 0.32rem;
+                                    color: #999;
+                                    height: 1.866667rem;
+                                    background: #fff;
+                                    text-align: left;
+                                    padding: 0 0.266667rem;
+                                    display: -webkit-box;
+                                    -webkit-box-orient: vertical;
+                                    -webkit-line-clamp: 4;
+                                    overflow: hidden;
+                                }
+                                span{
+                                    font-size: 0.346667rem;
+                                    color: #C2A185;
+                                    float: left;
+                                    display: block;
+                                    padding-left: 0.266667rem;
+                                    margin-top: 0.266667rem;
+                                }
+                            }
+                            .right_img{
+                                width: 60%;
+                                display: block;
+                                float: left;
+                                border-radius: 0 0.133333rem 0.133333rem 0;
+                                img{
+                                    min-height: 3.626667rem;
+                                    background: #eee;
+                                    border-radius: 0 0.133333rem 0.133333rem 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .cake_home_article{
+                    margin-top: 0.266667rem;
+                    background: #fff;
+                    h3{
+                        margin-bottom: 0.4rem;
+                        span{
+                            color: #322418;
+                            display: inline-block;
+                            height: 0.533333rem;
+                            font-size: 0.346667rem;
+                            background: #F4EBE2;
+                            border-radius: 100px;
+                            padding: 0 0.266667rem;
+                            line-height: 0.533333rem;
+                        }
+                    }
+                    .home-community-content{
+                        overflow: hidden;
+                        padding: 0.266667rem 0;
+                        .swiper-flower{
+                            .swiper-wrapper{
+                                .swiper-slide{
+                                        width: 6.0rem;
+                                        height: 4.666667rem;
+                                        box-shadow: 0 0 0.266667rem 0 rgba(0,0,0,0.10);
+                                        border-radius: 0.133333rem;
+                                        margin: 0 0.133333rem;
+                                        overflow: hidden;
+                                        background-size: auto 0.16rem !important;
+                                        text-align:center;
+                                        margin-right: 0.133333rem;
+                                        font-size: 0.4rem;
+                                    a{
+                                        .div_img{
+                                            background-image: url("../../../assets/img/2.jpg");
+                                            height: 3.2rem;
+                                            background-position: center center;
+                                            background-size: auto 100%;
+                                            background-repeat: no-repeat;
+                                            margin: 0;
+                                        }
+                                        h6{
+                                            font-size: 0.4rem;
+                                            font-weight:normal;
+                                            color: #383838;
+                                            margin-top: 0.346667rem;
+                                            overflow: hidden;
+                                            height: 0.586667rem;
+                                            text-overflow: ellipsis;
+                                            white-space: nowrap;
+                                            padding: 0 0.266667rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

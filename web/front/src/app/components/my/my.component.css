@@ -1,0 +1,18 @@
+        #my .my-center .title{height:1.173333rem;text-align: center;font-size:0.426667rem;color:#684029;line-height:1.173333rem;border-bottom:0.005667rem solid #CFBAAF;}
+        #my .my-center .messa{margin-top: 0.613333rem;}
+        #my .my-center .messa .img{width:1.92rem;height:1.92rem;margin:0 auto;}
+        #my .my-center .messa li{text-align: center;margin-bottom:0.2rem;font-size:0.32rem;}
+        #my .my-center .messa .btn-change{height:0.826667rem;width:3.2rem;border:0 none;background:#684029;color:#fff;font-size:0.32rem;border-radius:0.133333rem;}
+        #my .my-center .kfc{height:1.333333rem;margin-top:0.4rem;border-top:0.013333rem solid #ccc;font-size:0.373333rem;}
+        #my .my-center .kfc .left{width:50%;height:100%;border-right:0.013333rem solid #ccc;text-align: center;padding-top:0.133333rem;}
+        #my .my-center .kfc .right{width:50%;height:100%;text-align: center;padding-top:0.133333rem;}
+        #my .my-center .kfc .p2{color:#8E6A55;}
+        #my .my-center .order{background:#F6F6F6;padding-top:0.32rem;padding-bottom:1.333333rem;}
+        #my .my-center .order li{height:1.253333rem;line-height:1.253333rem;font-size:0.373333rem;background:#fff;border-bottom:0.013333rem solid #ccc;color:#8E6A55;padding:0 0.32rem;padding-left: 1.066667rem;position:relative;}
+        #my .my-center .order li img{width:1.066667rem;height:1.066667rem;position:absolute;left:0;top:0.133333rem;}
+        #my .my-center .btn-quit{text-align: center;font-size:0.373333rem;height:1.253333rem;line-height: 1.253333rem;color:#000;}
+        #my .my-foot{height:2.773333rem;background:#414141;color:#999;font-size:0.32rem;padding-top:0.8rem;}
+        #my .my-foot p{text-align: center;}
+        #my .my-center .messa .username{font-weight:bold;font-size:0.42rem;}
+        .box-my {display: flex;flex-direction: column;height:100%;}
+        #my{flex:1;overflow: auto;}

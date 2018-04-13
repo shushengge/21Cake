@@ -1,0 +1,115 @@
+.home{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.home .home_head{
+    height:46px;
+    width:100%-40px;
+    background-color: #1f1f1f;
+    line-height: 46px;
+    padding: 0 40px;
+    color:white;
+
+}
+.home .home_head div{
+    float: left;
+    height:46px;
+}
+.home .home_head .home_head_left{
+    font-weight: 800;
+    font-size: 17px;
+}
+.home .home_head .home_head_right{
+    float:right;
+}
+
+.home .home_head .home_head_left span{
+    color:#d64635;
+    padding-left: 10px;
+}
+.home .home_head .home_head_right #translate{
+    height:20px;
+    width: 69px;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+.home .home_body{
+    flex:1;
+    display:flex;
+}
+.home .home_body .home_nav{
+    height:100%;
+    width:234px;
+    background-color: #333;
+    color: white;
+    opacity:0.95;
+}
+.home .home_body .home_nav div{
+    height:20px;
+    border-top: 0.5px solid #484848 ;
+    padding:10px 15px;
+    font-size: 14px;
+    color:#d9d9d9;
+}
+
+.home .home_body .home_nav .admin{
+    height: 140px;
+    text-align: center;
+    padding: 30px 15px;
+}
+.home .home_body .home_nav div i{
+    display:inline-block;
+    height:18px;
+    width:14px;
+}
+.home .home_body .home_nav .admin>i{
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+    text-align: center;
+    border: 1px solid #484848;
+    line-height: 100px;
+    border-radius: 50%;
+    color: black;
+    background-color: white;
+}
+.home .home_body .home_nav .admin p{
+    height: 30px;
+    width:200px;
+}
+.home .home_body .home_nav .admin p span{
+    color:#d64635;
+    font-size: 20px;
+}
+
+.home .home_body .home_nav div .wel{
+    font-size: 18px;
+}
+.home .home_body .home_nav .menu_hide{
+    margin-bottom:10px;
+}
+
+.home .home_body .home_nav div .menu_side{
+    display: block;
+    cursor: pointer;
+    opacity: 0.7;
+    width: 30px;
+    height: 30px;
+    float: right;
+    color:lightgray;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: black;
+    font-weight: 100;
+}
+.home .home_body .home_nav div span{
+    padding-left: 10px;
+}
+.home .home_body .home_content{
+    flex:1;
+    padding: 25px 20px;
+    overflow-x: auto;
+}

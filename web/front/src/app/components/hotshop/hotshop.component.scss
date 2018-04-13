@@ -1,0 +1,91 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-10 15:21:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-10 15:21:56
+*/
+#hotshop{
+    .pro_list_title{
+        text-align: center;
+        h2{
+            padding: 0.213333rem 0;
+            text-align: center;
+            font-size: 0.4rem;
+            height: 1.253333rem;
+            margin: 0 auto;
+            line-height: 0.4rem;
+            background: rgba(213,191,167,0.10);
+            border-bottom: 1px solid #E9E9E9;
+        }
+    }
+    .list_box{
+        padding-left: 0.133333rem;
+        padding-right: 0.533333rem;
+        ul{
+            overflow: hidden;
+            margin-bottom: 0.533333rem;
+            li{
+                width: 50%;
+                float: left;
+                position: relative;
+                .list_pro_content{
+                    padding-left: 0.4rem;
+                    a{
+                        display: block;
+                        overflow: hidden;
+                        font-weight:normal;
+                        color: #442818;
+                        position: relative;
+                        img{
+                            width: 100%;
+                        }
+                        h3{
+                            font-size: 0.346667rem;
+                            line-height: 1.2em;
+                            width: 100%;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            span{
+                                font-size: 0.32rem;
+                                display: block;
+                                width: 100%;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                font-weight:normal;
+                            }
+                        }
+                        .price{
+                            color: #BB9772;
+                            display: block;
+                            margin-top: 0.133333rem;
+                        }
+                        .label{
+                            position: absolute;
+                            top: 0.4rem;
+                            left: 0;
+                            img{
+                                width: 1.066667rem;
+                            }
+                        }
+                    }
+                    .cart-add{
+                            display: block;
+                            width: 23%;
+                            padding: 5%;
+                            position: absolute;
+                            padding-top: 0.533333rem;
+                            right: 0;
+                            bottom: -3%;
+                            img{
+                                vertical-align: bottom;
+                                display: inline-block;
+                                width: 100%;
+                            }
+                    }
+                }
+            }
+        }
+    }
+}

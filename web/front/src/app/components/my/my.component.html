@@ -1,0 +1,52 @@
+<div class="box-my">
+<header></header>
+<alert *ngIf="show1" params="已退出" style="z-index:10000"></alert>
+<div id="my">
+        <div class="my-center">
+            <div class="title">我的廿一客</div>
+            <div class="messa">
+                <ul>
+                    <li>
+                        <img src="./assets/img-my/my1.png" class="img"/>
+                    </li>
+                    <li class="username">
+                        
+                    </li>
+                    <li>
+                        <input type="button" value="修改个人信息>" class="btn-change"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="kfc">
+                <div class="fl left">
+                    <p>￥0.0</p>
+                    <p class="p2">果实币余额</p>
+                </div>
+                <div class="fl right">
+                    <p>0张</p>
+                    <p class="p2">优惠卷</p>
+                </div>
+            </div>
+            <div class="order">
+                <ul>
+                    <a routerLink="/myorder"><li>待付订单<span class="fr">></span>
+                        <img src="./assets/img-my/my2.png"/>
+                    </li></a>
+                    <a routerLink="/myorder"><li>全部订单<span class="fr">></span>
+                        <img src="./assets/img-my/my3.png"/>
+                    </li></a>
+                    <li>地址管理<span class="fr">></span>
+                        <img src="./assets/img-my/my4.png"/>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-quit" (click)="quit()">
+                退出登录
+            </div>
+        </div>
+        <div class="my-foot">
+            <p class="p1">Copyright© 21Cake蛋糕官网商城 2007-2015, 版权所有</p>
+            <p class="p2">京ICP备14006254号-1</p>
+        </div>
+</div>
+</div>

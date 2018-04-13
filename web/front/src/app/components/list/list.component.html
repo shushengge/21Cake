@@ -1,2 +1,39 @@
-<header></header>
-<h1>我是列表页</h1>
+<div class="list">
+    <header></header>
+    <alert *ngIf="show1"></alert>
+    <div class="nav">
+        <ul>
+            <li class="active" data-category="cake">蛋糕</li>
+            <li data-category="icecream">冰淇淋</li>
+            <li data-category="shortcake">小切块</li>
+            <li data-category="coffee">咖啡</li>
+            <li data-category="warmcake">常温蛋糕</li>
+            <li data-category="design">设计师礼品</li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="tag">
+            <p class="cate">蛋糕</p>
+            <p class="dosing">新鲜乳脂奶油蛋糕</p>
+        </div>
+        <ul>
+            <li *ngFor="let obj of dataset; trackBy:trackByName">
+                <a [routerLink]="['/details', obj._id]">
+                    <img src="../../../assets/static/load.gif" [attr.data-src]="baseurl+obj.img" Load/>
+                </a>
+                <div class="des">
+                    <p class="enname">{{obj.enname}}</p>
+                    <p class="cnname">{{obj.cnname}}</p>
+                    <div class="buy">
+                        <p class="price">¥{{obj.price}}/个</p>
+                        <i class="fa fa-cart-plus" (click)="add(obj)"></i>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <i class="fa fa-spinner fa-spin upload" *ngIf="show"></i>
+        <p class="hint">{{show ? "" : "没有更多数据了"}}</p>
+        <footer></footer>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="login-cont">
+    <ul>
+        <li><input type="text" placeholder="用户名/邮箱地址" (change)="username()" class="username"/></li>
+        <li><input type="password" placeholder="填写密码" class="password"/></li>
+        <li><input type="text" class="hint"/></li>
+    </ul>
+</div>
+<div>
+    <input type="button" value="登录" class="login-btn" (click)="tologin()"/>
+</div>
+<div class="login-foot">
+    <input type="checkbox" class="fl"/><a class="fl">记住帐号</a>
+    <a class="fr" routerLink="/register">去注册</a><a class="fr">忘记密码</a>
+</div>

@@ -1,0 +1,73 @@
+.address{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    font-style:normal;
+    .head{
+        font-size:30px;
+        height:1.333333rem;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:0 0.4rem;
+        box-shadow:0 0.026667rem 0.053333rem 0 rgba(0, 0, 0, 0.10);
+        i{
+            font-size:36px;
+        }
+        .save{
+            color:#0076FF;
+        }
+    }
+    .content{
+        padding:0 0.4rem;
+        p{
+            height:1.333333rem;
+            border-bottom:0.026667rem solid #ccc;
+            display:flex;
+            align-items:center;
+            color:#442818;
+            font-size:30px;
+            input{
+                width:80%;
+                height:0.8rem;
+                border:0 none;
+                margin-left:0.533333rem;
+                font-size:26px;
+                color: #D6C0A9;
+            }
+            select{
+                width:2.666667rem;
+                height:0.8rem;
+                border:0.026667rem solid #ccc;
+                background:#fff;
+                margin-left:0.133333rem;
+                font-size:24px;
+                color: #D6C0A9;
+                option{
+                    font-size:14px;
+                }
+            }
+        }
+        .men{
+            border:0 none;
+            input{
+                margin-left:1.333333rem;
+            }
+        }
+    }
+}
+
+input::placeholder{
+    color: #D6C0A9;
+}
+
+
+
+@media screen and (min-width:992px){
+    .address .head{ font-size:50px; }
+    .address .head i{ font-size:60px; }
+    .address .content p{ font-size:50px; }
+    .address .content p input{ font-size:50px; }
+    .address .content p select{ font-size:50px; }
+    .address .content p select option{ font-size:20px; }
+}

@@ -1,0 +1,11 @@
+{
+    "cols": "_id,username,password,birthday",
+    "filterCols": "userid",
+    "colAttributes": {
+       "password": {
+           "type": "replaceReg",
+           "reg": "(\\d{1}).+(\\d{2})",
+           "val": "$1***$2"
+       }
+   }
+}
