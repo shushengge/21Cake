@@ -25,7 +25,7 @@ export class OrderlistComponent implements OnInit {
                 var qty = this.dataset['length'] > 0 ? this.dataset['length'] : 1;
                 console.log(this.qty)
                 var total = 0;
-
+                
                 this.dataset.forEach((item)=>{
                     console.log(item)
                     total += item.qty*item.price;

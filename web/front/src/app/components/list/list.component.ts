@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import * as $ from "jquery";
 import { HttpclientService } from "../../servers/httpclient.service";
+import { ElNotificationService } from 'element-angular';
 
 @Component({
   selector: 'list',
@@ -10,13 +11,14 @@ import { HttpclientService } from "../../servers/httpclient.service";
 })
 export class ListComponent implements OnInit {
 
-    constructor(private http:HttpclientService, private route: ActivatedRoute) { }
+    constructor(private http:HttpclientService, private route: ActivatedRoute, private notify: ElNotificationService) { }
 
     dataset: Array<any> = [];
     baseurl: string = this.http.baseurl+"temp/";
     show: number = 1;
     page: number = 1;
     tag: boolean = true;
+    show1: boolean = false;
 
     ngOnInit(){
         var pWidth = $(".nav").width(); //屏幕宽度
@@ -89,4 +91,15 @@ export class ListComponent implements OnInit {
         }
     }
  
+     //添加到购物车
+    add(params){
+        this.show1 = false;
+        var objParams = JSON.parse(JSON.stringify(params).replace("_id", "productid"));
+        var obj = Object.assign(objParams,{userid:window.sessionStorage.getItem("userid"), username:window.sessionStorage.getItem("username"), qty:1});
+        this.http.get("addCart", obj).then((res)=>{
+            if(res['status']){
+                this.show1 = true;
+            }
+        });
+    }
 }
