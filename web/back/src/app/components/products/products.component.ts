@@ -42,38 +42,38 @@ export class ProductsComponent implements OnInit {
     constructor(private http: HttpclientService,private dic:DictionaryService) { }
 
 
-    xuanran(e,num){
+    xuanran(e ?,num ?){
       this.http.get('http://localhost:4200/assets/config/products.txt').then((config)=>{
-        if(config['cols']){
-        this.columns = config['cols'].split(',');
-      }
-      if(config['filterCols']){
-        this.filterColumns = config['filterCols'].split(',');
-      }
-      if(config['hideCols']){
-        this.hideColumns = config['hideCols'].split(',');
-      }
-      this.http.get('backproducts',{page:num?num:1,limit:this.limit,title:this.searchValue}).then((res)=>{
-        if(res['error'] && !res['status']){
-          location.href="login";
+          if(config['cols']){
+          this.columns = config['cols'].split(',');
         }
-        this.pageNumber =Math.ceil(res['count'] /this.limit);
-        this.productsqty = res['count'];
-        // 循环前清零
-
-        this.pageNumberArray=[];
-        for(var i=0;i<this.pageNumber+1;i++){
-          if(i!=0){
-            this.pageNumberArray.push(i);
+        if(config['filterCols']){
+          this.filterColumns = config['filterCols'].split(',');
+        }
+        if(config['hideCols']){
+          this.hideColumns = config['hideCols'].split(',');
+        }
+        this.http.get('backproducts',{page:num?num:1,limit:this.limit,title:this.searchValue}).then((res)=>{
+          if(res['error'] && !res['status']){
+            location.href="login";
           }
-        }
-        this.dataset = res['data'];
-        this.dsColumns =this.dataset.length>0 ? Object.keys(this.dataset[0]):[];
-        this.matchCols();
-        this.num = num;
+          this.pageNumber =Math.ceil(res['count'] /this.limit);
+          this.productsqty = res['count'];
+          // 循环前清零
+
+          this.pageNumberArray=[];
+          for(var i=0;i<this.pageNumber+1;i++){
+            if(i!=0){
+              this.pageNumberArray.push(i);
+            }
+          }
+          this.dataset = res['data'];
+          this.dsColumns =this.dataset.length>0 ? Object.keys(this.dataset[0]):[];
+          this.matchCols();
+          this.num = num;
+        })
       })
-    })
-  }
+    }
 
   ngOnInit() {
       this.xuanran();
