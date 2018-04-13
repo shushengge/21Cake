@@ -17,3 +17,5 @@
 #reg .reg-box .reg-foot{font-size:0.32rem;color:#442818;margin-top: 0.666667rem;}
 #reg .reg-box .reg-foot span{color:#2A99FA;margin:0 0.106667rem;}
 #reg .reg-box .reg-foot input{height:0.4rem;width:0.4rem;margin-right: 0.106667rem;}
+#reg{display: flex;flex-direction: column;height:100%;}
+#reg .reg-box{flex:1;overflow: auto;}
