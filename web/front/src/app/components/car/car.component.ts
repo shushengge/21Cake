@@ -44,7 +44,8 @@ export class CarComponent implements OnInit {
 			// console.log(res);
 			if(res['status']){
 				this.carDataset = null;
-				console.log(Boolean([]);
+				this.totalPrice = this.sum(this.carDataset,this.arrQty);
+				
 			}
 		})
 
@@ -98,12 +99,16 @@ export class CarComponent implements OnInit {
 	// }
 	sum(dataset,arrQty){
 		let total: number = 0;
-		for(let i=0;i<dataset.length;i++){
-			// this.showDel[i] = false;
-			// console.log(this.carDataset[i]['qty'] * this.carDataset[i]['price'])
-			total += arrQty[i] * dataset[i]['price'];
-			// console.log(total);
+		if(dataset){
+			for(let i=0;i<dataset.length;i++){
+				// this.showDel[i] = false;
+				// console.log(this.carDataset[i]['qty'] * this.carDataset[i]['price'])
+				total += arrQty[i] * dataset[i]['price'];
+				// console.log(total);
 
+			}
+		}else {
+			total = 0;
 		}
 		return total;
 	}
@@ -156,10 +161,11 @@ export class CarComponent implements OnInit {
 		
 	}
 	delPro(e,id,idx){
-		console.log(idx);
+		// console.log(idx);
 		this.http.get('removeCart',{userid: this.userid, productid: id}).then((res)=>{
 			this.carDataset.splice(idx,1);
-			console.log(this.carDataset);
+			this.totalPrice = this.sum(this.carDataset,this.arrQty);
+			// console.log(this.carDataset);
 		})
 	}
 
@@ -213,6 +219,8 @@ export class CarComponent implements OnInit {
 						console.log('same');
 						// 购物车已存在该商品则只增加数量
 						this.pra['qty'] += res['data'][i]['qty'];
+						// 当前显示数量
+						this.carDataset[i]['qty'] = this.pra['qty'];
 						// 更新购物车信息
 						this.http.get('updateCartQty',this.pra).then((res)=>{
 							// console.log(res);
@@ -223,6 +231,8 @@ export class CarComponent implements OnInit {
 									this.router.navigate(['car']);
 								}else {
 									// alert('成功加入购物车！');
+									this.showAlert = true;
+
 									this.showAlert = true;
 								}
 
@@ -239,6 +249,9 @@ export class CarComponent implements OnInit {
 							this.arrProId.push(data['_id'])
 							this.showSpinner = false;
 							this.carDataset.push(this.pra);
+							this.arrQty.push(this.pra['qty']);
+							// 刷新价格
+							this.totalPrice = this.sum(this.carDataset,this.arrQty);
 							if(n===1){
 								this.router.navigate(['car']);
 							}else {
@@ -251,11 +264,13 @@ export class CarComponent implements OnInit {
 						}
 					})
 				}
-			}else {
+			}else if(!res['error']){
+				// 有权限且购物车为空
 				this.http.get('addCart',this.pra).then((res)=>{
 						// console.log(res);
 					if(res['status']){
-						this.arrProId.push(data['_id'])
+						this.arrProId.push(data['_id']);
+						
 
 						this.showSpinner = false;
 						if(this.carDataset){
@@ -263,7 +278,12 @@ export class CarComponent implements OnInit {
 						}else {
 							this.carDataset = [];
 							this.carDataset[0] = this.pra;
+							this.arrQty = [];
+							this.arrQty[0] = this.pra['qty'];
 						}
+						console.log(this.arrQty,this.carDataset);
+						// 刷新价格
+						this.totalPrice = this.sum(this.carDataset,this.arrQty);
 						if(n===1){
 							this.router.navigate(['car']);
 						}else {
