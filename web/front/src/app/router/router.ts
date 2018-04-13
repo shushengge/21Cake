@@ -11,6 +11,7 @@ import { MyComponent } from "../components/my/my.component";
 import { Login1Component } from "../components/login/login1/login1.component";
 import { Login2Component } from "../components/login/login2/login2.component";
 import { SearchComponent } from "../components/search/search.component";
+import { OrderlistComponent } from "../components/orderlist/orderlist.component";
 
 
 const Routes: Routes = [
@@ -29,6 +30,8 @@ const Routes: Routes = [
     ]},
     {path: 'register', component: RegisterComponent},
     {path: 'my', component: MyComponent},
+    {path: 'orderlist', component: OrderlistComponent},
+
 ];
 
 

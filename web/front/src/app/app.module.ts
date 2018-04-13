@@ -26,6 +26,7 @@ import { MyComponent } from './components/my/my.component';
 import { Login1Component } from './components/login/login1/login1.component';
 import { Login2Component } from './components/login/login2/login2.component';
 import { LoadDirective } from './directives/load.directive';
+import { OrderlistComponent } from './components/orderlist/orderlist.component';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { LoadDirective } from './directives/load.directive';
     Login1Component,
     Login2Component,
     MyComponent ,
+    OrderlistComponent,
     LoadDirective,
   ],
   imports: [
