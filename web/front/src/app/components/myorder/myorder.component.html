@@ -1,0 +1,42 @@
+<div id="myorder">
+    <div class="header">
+        <a routerLink="/my"><i> < </i></a> 我的订单
+    </div>
+    <div class="nav">
+        <ul>
+            <li class="fl li1"><span>未完成</span></li>
+            <li class="fl"><span>近期</span></li>
+            <li class="fl"><span>历史</span></li>
+        </ul>
+    </div>
+    <div class="cont">
+        <div class="orderlist">
+        <div class="hinder">当前还没有订单哦!</div>
+            <div class="pro-box">
+                <div class="top">
+                    <p class="fl">2018-04-12 16:40下单</p><p class="fr">待付款</p><img src="./assets/img-my/order1.png" class="fr"/>
+                </div>
+                <div class="box">
+                    <div class='pro-list'>
+                        <ul class="list-ul">
+                            <li *ngFor = "let item of dataset"><img src="{{link+item.img}}"/></li>
+<!--                             <li><img src="./assets/img/2.jpg"/></li>
+                            <li><img src="./assets/img/3.jpg"/></li>
+                            <li><img src="./assets/img/4.jpg"/></li>
+                            <li><img src="./assets/img/5.jpg"/></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="price">
+                    <div class="fr">
+                        共<span class="span1">{{num}}</span>件<span class="span2">￥</span><span class="span3">{{price}}</span>
+                    </div>
+                </div>
+                <a routerLink="/car"><div class="box-btn">
+                    再次购买
+                </div></a>
+            </div>
+        </div>
+        <footer></footer>
+    </div>
+</div>
