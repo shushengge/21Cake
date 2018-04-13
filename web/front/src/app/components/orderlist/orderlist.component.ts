@@ -55,4 +55,7 @@ export class OrderlistComponent implements OnInit {
         })
     }
 
+    back(){
+        history.back()
+    }
 }
