@@ -129,10 +129,10 @@ export class ProductsComponent implements OnInit {
       this.Title = tcvalue[2].innerText;
       this.Price = tcvalue[3].innerText;
       this.Number = tcvalue[4].innerText;
-      // this.Weight = tcvalue[5].innerText;
-      this.Category = tcvalue[5].innerText;
-      this.Img = tcvalue[6].innerText;
-      this.Hot = tcvalue[7].innerText;
+      this.Weight = tcvalue[5].innerText;
+      this.Category = tcvalue[6].innerText;
+      this.Img = tcvalue[7].innerText;
+      this.Hot = tcvalue[8].innerText;
     }
     //显示modal（模态框）
     appearModal(e,item){
