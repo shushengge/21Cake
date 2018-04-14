@@ -66,6 +66,9 @@ export class DetailsComponent implements OnInit {
 	gotoCart(e,n,id,data){
 		// console.log('tocart');
 		// console.log($('li.active').text());
+		if(!this.pra['userid']){
+			return this.router.navigate(['login']);
+		}
 		this.showSpinner = true;
 		this.pra['productid'] = id? id : this.pra['productid']; 
 		let dataset = data?  data : this.dataset;
@@ -93,7 +96,7 @@ export class DetailsComponent implements OnInit {
 						// 更新购物车信息
 						this.http.get('updateCartQty',this.pra).then((res)=>{
 							// console.log(res);
-							if(res['status']){
+							// if(res['status']){
 								this.showSpinner = false;
 
 								if(n===1){
@@ -101,9 +104,12 @@ export class DetailsComponent implements OnInit {
 								}else {
 									// alert('成功加入购物车！');
 									this.showAlert = true;
+									setTimeout(()=>{
+										this.showAlert = false;
+									},1000)
 								}
 
-							}
+							// }
 						})
 						break;
 					}
@@ -120,7 +126,9 @@ export class DetailsComponent implements OnInit {
 							}else {
 								// alert('成功加入购物车！');
 								this.showAlert = true;
-
+								setTimeout(()=>{
+									this.showAlert = false;
+								},1000)
 							}
 						}
 					})
@@ -136,6 +144,9 @@ export class DetailsComponent implements OnInit {
 						}else {
 							// alert('成功加入购物车！');
 							this.showAlert = true;
+							setTimeout(()=>{
+								this.showAlert = false;
+							},1000)
 						}
 					}
 				})
