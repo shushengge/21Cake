@@ -4,7 +4,7 @@ const filter = require("../utils/filter");
 module.exports = {
     register:(app) => {
 
-        // 商品的模糊查询，可以传一个title，不传title代表查询所有，也可以传page和limit来进行分页查询
+        // 商品的模糊查询，可以传一个title关键字，不传title代表查询所有，也可以传page和limit来进行分页查询
         app.get("/frontProducts", (req, res) => {
             let title = req.query.title;
             let page = req.query.page;
@@ -12,7 +12,21 @@ module.exports = {
             page1 = page ? (page-1)*limit : 0;
             limit1 = limit ? page*limit : 99999;
             let pramas = new RegExp(title);
-            db.mongodb.select("products",{$or:[{title:pramas},{name:pramas},{category:pramas}]}).then((data) => {
+            db.mongodb.select("products",{$or:[{title:pramas},{cnname:pramas},{enname:pramas}, {category:pramas}]}).then((data) => {
+                res.send({status:true, count:data.length, data:data.slice(page1, limit1)});
+            })
+        })
+        
+        //商品分类查询,2018-4-10
+        //参数：category类别，page页码，limit返回数据数量
+        app.get("/category", (req, res)=>{
+            let page = req.query.page;
+            let limit = req.query.limit;
+            let category = req.query.category;
+
+            page1 = page ? (page-1)*limit : 0;
+            limit1 = limit ? page*limit : 99999;
+            db.mongodb.select("products", {"category":category}).then((data)=>{
                 res.send({status:true, count:data.length, data:data.slice(page1, limit1)});
             })
         })

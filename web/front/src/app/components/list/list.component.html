@@ -18,7 +18,7 @@
             <p class="dosing">新鲜乳脂奶油蛋糕</p>
         </div>
         <ul>
-            <li *ngFor="let obj of dataset">
+            <li *ngFor="let obj of dataset; trackBy:trackByName">
                 <a [routerLink]="['/details', obj._id]">
                     <img src="../../../assets/static/load.gif" [attr.data-src]="baseurl+obj.img" Load/>
                 </a>

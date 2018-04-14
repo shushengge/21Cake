@@ -26,6 +26,9 @@ app.all('*', function(req, res, next) {
 // express的post需要，任何路由都要经过这里
 app.use(bp.urlencoded({extended:false}));
 
+// 允许跨文件夹访问其他静态资源
+const path = require("path");
+app.use(express.static(path.join(path.resolve(__dirname,'../'),'/')));
 
 
 module.exports = {

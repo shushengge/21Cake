@@ -19,7 +19,6 @@ export class UsersComponent implements OnInit {
   filterColumns: Array<string> = [];
   hideColumns: Array<string> = [];
   columnsAttributes: Object = {};
-  // searchConfig: Object = {};
 
   constructor(private http: HttpclientService) { }
 
@@ -37,7 +36,11 @@ export class UsersComponent implements OnInit {
           }
           this.columnsAttributes = config['colAttributes'] || {};
           this.http.get('backUsers',{page:1,limit:5}).then((res)=>{
-            console.log(res)
+            for(var i=0;i<this['pageNumber+1'];i++){
+              if(i!=0){
+                this['pageNumberArray'].push(i);
+              }
+            }
             this.dataset = res['data'];
             this.dsColumns = Object.keys(this.dataset[0]);
             this.matchCols();
@@ -83,9 +86,10 @@ export class UsersComponent implements OnInit {
 		return value;
 
 	}
-  //
-  // pageing(item){
-  //   console.log(item.length)
+  // del(e){
+  //     this.dataset.splice(e.target.getAttribute("data-idx1"),1)
+  //     this.http.get('backDelproduct',{id:e.target.getAttribute("data-id_users")}).then((res)=>{
+  //     })
   // }
 
 }

@@ -11,7 +11,7 @@ import { ElNotificationService } from 'element-angular';
 })
 export class ListComponent implements OnInit {
 
-    constructor(private http:HttpclientService, private route: ActivatedRoute, private notify: ElNotificationService) { }
+    constructor(private http:HttpclientService, private route: ActivatedRoute, private notify: ElNotificationService, private router: Router) { }
 
     dataset: Array<any> = [];
     baseurl: string = this.http.baseurl+"temp/";
@@ -99,7 +99,13 @@ export class ListComponent implements OnInit {
         this.http.get("addCart", obj).then((res)=>{
             if(res['status']){
                 this.show1 = true;
+            }else{
+                this.router.navigate(['/login']);
             }
-        });
+        }); 
+    }
+
+    trackByName(index, obj) {
+        return obj._id;
     }
 }

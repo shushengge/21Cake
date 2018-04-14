@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpclientService } from "../../servers/httpclient.service";
 import { CommontService } from "../../servers/commont.service";
+import { Router } from '@angular/router';
 import * as $ from "jquery";
 
 @Component({
@@ -10,12 +11,13 @@ import * as $ from "jquery";
 })
 export class AddressComponent implements OnInit {
 
-  constructor(private http : HttpclientService, private address : CommontService) { }
+  constructor(private http : HttpclientService, private address : CommontService, private router: Router) { }
 
   obj: Array<any> = [];
   province: Array<any> = [];
   city: Array<any> = [];
   town: Array<any> = [];
+  show: boolean = false;
 
     ngOnInit() {
         this.http.get("http://localhost:4200/assets/area/region.json").then((res)=>{
@@ -77,8 +79,15 @@ export class AddressComponent implements OnInit {
                     {"street": street}, 
                     {"men": men}
                   ];
-        console.log(arr);
-        this.address.address = arr;
+        if(name && phone && province!="__请选择__" && city!="__请选择__" && town!="__请选择__" && street && men){
+            this.address.address = arr;
+            this.router.navigate(["/orderlist"]);
+        }else{
+             this.show = true;
+             setTimeout(()=>{
+                 this.show = false;
+             }, 1000)
+        }
     }
 
     // 放回上一步

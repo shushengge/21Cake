@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5acb0486cc8fa3dce16177f9"},"username":"user1","password":"123456789","birthday":"1999-10-1","userid":"123456789"}
+{"_id":{"$oid":"5acdb46a2ba70d11bcbc1e10"},"username":"asdasd","password":"123123","birthday":null}
+{"_id":{"$oid":"5acdf2769d3a060814f6c7ce"},"username":"qweqwe","password":"123123","birthday":null}
+{"_id":{"$oid":"5aceb6e31c5c2e14a00fe80e"},"username":"zxczxc","password":"123123","birthday":null}

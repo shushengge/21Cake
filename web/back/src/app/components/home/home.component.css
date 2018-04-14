@@ -4,6 +4,10 @@
     display: flex;
     flex-direction: column;
 }
+img{
+  height: 100px;
+  weight:100px;
+}
 .home .home_head{
     height:46px;
     width:100%-40px;
@@ -41,7 +45,7 @@
 }
 .home .home_body .home_nav{
     height:100%;
-    width:234px;
+    width:200px;
     background-color: #333;
     color: white;
     opacity:0.95;
@@ -77,7 +81,7 @@
 }
 .home .home_body .home_nav .admin p{
     height: 30px;
-    width:200px;
+    width:165px;
 }
 .home .home_body .home_nav .admin p span{
     color:#d64635;

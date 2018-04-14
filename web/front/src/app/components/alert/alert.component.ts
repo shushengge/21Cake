@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as $ from "jquery";
 
 
@@ -8,11 +8,18 @@ import * as $ from "jquery";
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent implements OnInit {
-    show2 : boolean = true;
+   show2 : boolean = true;
+
+   @Input() params : string = "";
 
   constructor() { }
 
   ngOnInit() {
+     
+        setTimeout(()=>{
+          this.params ? $(".alert p").text(this.params) : $(".alert p").text("加入成功");
+        },36)
+     
      setTimeout(()=>{
         this.show2 = false;
      }, 1000)

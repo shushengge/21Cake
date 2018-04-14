@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {HttpclientService} from './services/httpclient.service';
+import {DictionaryService} from './services/dictionary.service';
+import {ModalService} from './services/modal.service';
+
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
 import { AppComponent } from './app.component';
@@ -15,7 +18,9 @@ import { UsersComponent } from './components/users/users.component';
 import { AppRouter } from './router/routers';
 import { HomeComponent } from './components/home/home.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
-import { IndentComponent } from './components/indent/indent.component'
+import { IndentComponent } from './components/indent/indent.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { SpinnerComponent } from './components/spinner/spinner.component'
 
 // import { BootstrapComponent } from '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
@@ -30,17 +35,19 @@ import { IndentComponent } from './components/indent/indent.component'
     HomeComponent,
     WelcomeComponent,
     IndentComponent,
+    ModalComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
     AppRouter,
     FormsModule,
-    HttpModule,
-    // BootstrapComponent
+    HttpModule
   ],
   providers: [
-    HttpclientService
-
+    HttpclientService,
+    DictionaryService,
+    ModalService
   ],
   bootstrap: [AppComponent]
 })
