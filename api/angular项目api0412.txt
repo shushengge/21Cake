@@ -1,0 +1,112 @@
+后台系统api：get方法
+	（1）backproducts
+		查找所有商品信息（不传参）
+		分页（page, limit）
+		模糊查询（title）
+		对商品的指定字段进行查询
+		（支持搜索的内容：title 、cnname、enname、category）
+	（2）backAdmin
+		查找所有管理员信息（不传参）
+		分页（page, limit）
+	（3）backUsers
+		查找所有用户信息（不传参）
+		分页（page, limit）
+
+	（4）backAddproduct
+		添加商品路由
+		(cnname:string, enname:string, 
+			title:string, price:number, number:number, 									category:string, img:string, hot:0/1）
+	（5）backDelproduct
+		删除商品路由（_id）
+	（6）backUpdproduct
+		更新商品路由
+		 (_id，cnname:string, enname:string, 
+			title:string, price:number, number:number, 									category:string, img:string, hot:0/1）
+
+	（7）admin
+		管理员登录查询（username， password）
+
+	（8）selectCart
+		查询所有购物车里面的信息，不区分用户信息
+		分页（page, limit）
+	（9）selectOrder
+		查询所有订单包括未付款status=0和已付款status=1，不区分用户信息
+		分页（page, limit）
+
+app前端 api：get方法
+
+	一、商品类的查询接口：
+	（1）frontProducts
+		查找所有商品信息（不传参）
+		分页（page, limit）
+		模糊查询（title）
+		对商品的指定字段进行查询
+		（支持搜索的内容：title 、cnname、enname、category）		
+	（2）category
+		查找特定分类(必须参数 ：category)
+		分页（可选参数：page, limit）
+		注：category的字段有: cake,icecream, shortcake,
+			coffee, warmcake, design 六个分类		
+	（3）frontIdproduct
+		根据_id对商品进行查询（_id）
+
+	二、用户类的查询接口：
+
+	（4）  login
+		用户登录验证（username， password）
+
+	（5-1）usercheck （username）
+		判断用户名是否已被占用
+		用户已存在返回“no”，否则为“yes”
+
+	（5-2）register
+		用户注册（username, password, birthday这些为必传参数）
+
+	三、购物车操作api
+	（6）addCart
+		加入购物车
+		必传参数：
+		
+		"userid":userid, "qty":qty, "productid":productid,"username":username, 
+
+		cnname:string,    enname:string, 
+		title:string,     price:number, 
+		number:number, 	  category:string,      weight:number,
+		img:string,       imgdetail:string,     imgindex:string
+		hot:0/1
+		
+	（12）updateCartQty
+		1、当qty>0时，修改已经添加到了购物车的qty，用新的qty值覆盖之前的qty的值
+		必传参数："userid":userid,  "productid":productid， "qty":qty
+
+		2、当qty==0时，删除已经添加到了购物车的那一条记录
+		必传参数："userid":userid,  "productid":productid， "qty":qty
+	（13）removeCart 
+		删除已经添加到了购物车的那一条记录
+		必传参数："userid":userid,  "productid":productid
+
+	 (14) removeInArr 
+		批量删除已经添加到了购物车记录
+		必传参数："userid":userid,  
+		"productArr":productArr  //string,例如			"5acecd70d4b48c1b0cbae9b7,5acecdb2d4b48c1b0cbae9b8,5aced5a6d4b48c1b0cbae9b9"
+
+	（7）userCart
+		根据用户userid对购物车数据进行查询，返回该用户所有的购物车商品信息
+		（传递参数：userid）
+
+	四、订单页面api
+
+	（8）insertOrder
+		参数传递：userid，username，status=0，products：jsonstring
+		生成订单
+
+	（15）proUpdate 更新某个用户的未付款订单里面的商品列表信息 
+		参数传递：userid，status=0，新的产品信息products
+
+	（9）payUpdate----模拟结算
+		更新用户订单的status变成1
+		参数传递（userid， status=0）
+
+	（10）userOrder
+		根据用户id,状态对订单进行查询（userid， status）
+

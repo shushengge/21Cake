@@ -54,11 +54,11 @@ module.exports = {
 
             if(qty > 0){
                 db.mongodb.qtyUpdate("cart", {"userid":userid, "productid":productid}, qty).then((result)=>{
-                    res.send({status:true, data:result});
+                    res.send({data:result});
                 })
             }else if(qty == 0){
                 db.mongodb.delete("cart", {"userid":userid, "productid":productid}).then((result)=>{
-                    res.send({status:true, data:result});
+                    res.send({data:result});
                 })
             }         
         })
@@ -91,8 +91,8 @@ module.exports = {
         app.get("/userCart", filter, (req, res) => {
             let userid = req.query.userid;
             db.mongodb.select("cart", {"userid":userid}).then((result)=>{
-                if(result['length']>0){
-                    res.send({status:true, data:result})
+                if(result && result['length']>0){
+                    res.send({status:true, count:result.length, data:result})
                 }else{
                     res.send({status:false})
                 }
@@ -106,7 +106,13 @@ module.exports = {
             page1 = page ? (page-1)*limit : 0;
             limit1 = limit ? page*limit : 99999;
             db.mongodb.select("cart", {}).then((data) => {
-                res.send({status:true, count:data.length, data:data.slice(page1, limit1)});
+
+                if(data && data['length']>0){
+                    res.send({status:true, count:data.length, data:data.slice(page1, limit1)});
+                }else{
+                    res.send({status:false});
+                }
+                
             })
         })
     }

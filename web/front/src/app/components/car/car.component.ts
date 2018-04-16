@@ -190,6 +190,7 @@ export class CarComponent implements OnInit {
 		}else {
 			// console.log(item);
 			this.gotoCart(e,0,id,item);
+
 		}
 	}
 

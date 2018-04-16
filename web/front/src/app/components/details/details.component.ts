@@ -57,6 +57,8 @@ export class DetailsComponent implements OnInit {
 		// console.log($(e.target).hasClass('recommend-cart'),id);
 		if(!$(e.target).hasClass('recommend-cart')){
 			this.router.navigate(['details/' + id]);
+			// console.log($('body'))
+			// $('body').animate({scrollTop:'0'},500);
 		}else {
 			// console.log(item);
 			this.gotoCart(e,0,id,item);

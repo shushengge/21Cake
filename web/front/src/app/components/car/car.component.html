@@ -5,6 +5,7 @@
 		<p class="car-top-tip">· 满一百元免配送服务费 ·</p>
 		<ul class="car-list" *ngIf="carDataset">
 			<li *ngFor="let item of carDataset;let idx= index">
+				<span (click)="delPro($event,item['productid'],idx)">x</span>
 				<div class="clearfix">
 					<a href="javascript:void(0)" class="fl">
 						<img  [src]="srcLink+item['img']">
