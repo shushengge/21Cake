@@ -3,19 +3,48 @@
       <h2>订单</h2>
     </div>
     <div class="products_nav nav">
-      <i class="fa fa-home wel"></i>
+      <i class="fa fa-heart wel"></i>
       <span>订单</span>
       <i class="fa fa-angle-right"></i>
     </div>
     <div class="products_describe describe">
-      <span>订单页面，用户已付款的订单，后台不可操作。</span>
+      <!-- ，用户已付款的订单， -->
+      <span>订单页面，后台不可操作。</span>
     </div>
     <div class="products_form form">
         <div class="form_head">
-            <span>users</span>的订单
+            订单
         </div>
         <div class="form_content">
-            
+          <table *ngIf="dataset" class="table table-striped">
+            <thead>
+              <tr>
+                <ng-template ngFor let-key [ngForOf]="columns">
+                  <th [class.item-hide]="hideColumns.indexOf(key) > -1">{{key}}</th>
+                </ng-template>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of dataset,let idx=index1">
+                <ng-template ngFor let-key [ngForOf]="columns">
+                  <td [class.item-hide]="hideColumns.indexOf(key) > -1">{{ dataFilter(item[key],key)}}</td>
+                </ng-template>
+              </tr>
+
+            </tbody>
+          </table>
+
         </div>
+        <!-- <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li><a href="#">&laquo;</a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li class="disabled"><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav> -->
     </div>
 </div>

@@ -39,7 +39,7 @@ export class CarComponent implements OnInit {
 			str += this.arrProId[i] + ',';
 		}
 		str = str.slice(0,-1);
-		console.log(str);
+		// console.log(str);
 		this.http.get('removeInArr',{userid: this.userid, productArr: str}).then((res)=>{
 			// console.log(res);
 			if(res['status']){
@@ -195,7 +195,7 @@ export class CarComponent implements OnInit {
 	}
 
 	gotoCart(e,n,id,data){
-		console.log(data);
+		// console.log(data);
 		// console.log($('li.active').text());
 		this.showSpinner = true;
 		this.pra['productid'] = id? id : this.pra['productid']; 
@@ -225,7 +225,7 @@ export class CarComponent implements OnInit {
 						// 更新购物车信息
 						this.http.get('updateCartQty',this.pra).then((res)=>{
 							// console.log(res);
-							if(res['status']){
+							// if(res['status']){
 								this.showSpinner = false;
 
 								if(n===1){
@@ -233,11 +233,12 @@ export class CarComponent implements OnInit {
 								}else {
 									// alert('成功加入购物车！');
 									this.showAlert = true;
-
-									this.showAlert = true;
+									setTimeout(()=>{
+										this.showAlert = false;
+									},1000)
 								}
 
-							}
+							// }
 						})
 						break;
 					}
@@ -258,7 +259,9 @@ export class CarComponent implements OnInit {
 							}else {
 								// alert('成功加入购物车！');
 								this.showAlert = true;
-
+								setTimeout(()=>{
+									this.showAlert = false;
+								},1000)
 								this.changePic();
 
 							}
@@ -290,7 +293,9 @@ export class CarComponent implements OnInit {
 						}else {
 							// alert('成功加入购物车！');
 							this.showAlert = true;
-
+							setTimeout(()=>{
+								this.showAlert = false;
+							},1000)
 							this.changePic();
 
 						}
