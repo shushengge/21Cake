@@ -31,6 +31,17 @@ module.exports = {
             })
         })
 
+        app.post("/cate", (req, res)=>{
+            let page = req.body.page;
+            let limit = req.body.limit;
+            let category = req.body.category;
+            page1 = page ? (page-1)*limit : 0;
+            limit1 = limit ? page*limit : 99999;
+            db.mongodb.select("products", {"category":category}).then((data)=>{
+                res.send({status:true, count:data.length, data:data.slice(page1, limit1)});
+            })
+        })
+
 
         // 对商品的指定字段进行查询
         app.get("/frontApoproducts", (req, res) => {
